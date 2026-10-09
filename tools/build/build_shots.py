@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_shots.py — страница «Сайт в скриншотах»: 46 экранов демо-сайта «Шестая полоса» с разбором.
+"""build_shots.py — страница «Сайт в скриншотах»: 46 экранов демо-сайта Bootstrap 6 с разбором.
 Превью (JPEG 1200 px) лежат в skrinshoty/preview, оригиналы (PNG, масштаб 2×) — в skrinshoty/img."""
 import html, pathlib
 from PIL import Image
@@ -122,7 +122,7 @@ def main():
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Сайт в скриншотах — Bootstrap 6 на смоделированном сайте</title>
-<meta name="description" content="{total} снимков демо-сайта «Шестая полоса» на Bootstrap 6.0.0-alpha.1 в Chromium 153 с разбором: десктоп, телефон, тёмная схема, открытые диалоги, меню, календарь, комбобокс, перестроенные токены.">
+<meta name="description" content="{total} снимков демо-сайта Bootstrap 6 на версии 6.0.0-alpha.1 в Chromium 153 с разбором: десктоп, телефон, тёмная схема, открытые диалоги, меню, календарь, комбобокс, перестроенные токены.">
 <meta name="author" content="Бейбит Саханов">
 <link rel="canonical" href="https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/">
 <meta property="og:title" content="Сайт в скриншотах — Bootstrap 6 на смоделированном сайте"><meta property="og:type" content="article">
@@ -134,8 +134,8 @@ def main():
 <body>
 <nav class="topnav"><div class="topnav-inner"><a class="topnav-mark" href="../">bootstrap 6 · сайт в скриншотах</a><div class="topnav-links">{nav}<a href="../doklad/bootstrap-6-research.html">доклад</a><a href="../demo/index.html">демо-сайт</a></div></div></nav>
 <header class="hero"><div class="wrap">
-<p class="eyebrow">приложение к исследованию · редакция 1.0 · 9 октября 2026</p>
-<h1>«Шестая полоса» в скриншотах</h1>
+<p class="eyebrow">приложение к исследованию · редакция 1.0.1 · 9 октября 2026</p>
+<h1>Демо-сайт Bootstrap 6 в скриншотах</h1>
 <p class="lead">{total} экранов демо-сайта на Bootstrap 6.0.0-alpha.1, снятых в Chromium 153.0.8010.0 через Playwright 1.56 в масштабе 2×: семь страниц на десктопе и телефоне, тёмная схема, открытые состояния и крупные планы — с разбором того, что на каждом экране делает фреймворк.</p>
 <p class="sub">Клик по снимку открывает оригинал PNG; на странице показаны превью JPEG шириной 1200 пикселей. Тёмная схема включена эмуляцией системного предпочтения, а не атрибутом. Автор — Бейбит Саханов, Астана.</p>
 <div class="links"><a href="../demo/index.html">открыть демо-сайт</a><a href="../doklad/bootstrap-6-research.html">читать доклад</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a></div>

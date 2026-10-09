@@ -1,4 +1,4 @@
-// Шестая полоса — сценарии демо-сайта. ES-модуль: в Bootstrap 6 нет UMD-сборки и глобального
+// Демо-сайт Bootstrap 6 — сценарии. ES-модуль: в Bootstrap 6 нет UMD-сборки и глобального
 // объекта `bootstrap`, классы берутся явным импортом из той же сборки, что подключена в <head>.
 import { Tooltip, Popover, Toast, Dialog } from './bootstrap/bootstrap.bundle.min.js'
 
@@ -31,7 +31,7 @@ export function spToast(text, theme = 'primary') {
   const el = document.createElement('div')
   el.className = 'toast'
   el.setAttribute('role', 'status')
-  el.innerHTML = `<div class="toast-header"><span class="badge theme-${theme} me-2">6</span><strong class="me-auto">Шестая полоса</strong><small class="fg-2">сейчас</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button></div><div class="toast-body">${text}</div>`
+  el.innerHTML = `<div class="toast-header"><span class="badge theme-${theme} me-2">6</span><strong class="me-auto">Bootstrap 6 демо</strong><small class="fg-2">сейчас</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button></div><div class="toast-body">${text}</div>`
   area.appendChild(el)
   el.addEventListener('hidden.bs.toast', () => el.remove())
   Toast.getOrCreateInstance(el, { delay: 4000 }).show()

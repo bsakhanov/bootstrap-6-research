@@ -12,7 +12,7 @@ import datetime, html, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 PAGES = ROOT / 'tools/demo/pages'
 OUT = ROOT / 'demo'
-VERSION = '1.0'
+VERSION = '1.0.1'
 STAMP = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
 
 NAV = [('index', 'Главная'), ('rubrika', 'Рубрика'), ('statya', 'Статья'),
@@ -53,7 +53,7 @@ def navbar(active):
     return f"""<header class="sticky-top">
 <nav class="navbar md:navbar-expand bg-1 border-bottom border-subtle" aria-label="Главное меню">
   <div class="container">
-    <a class="navbar-brand fw-semibold d-flex align-items-center" href="index.html"><span class="sp-mark" aria-hidden="true">6</span>Шестая полоса</a>
+    <a class="navbar-brand fw-semibold d-flex align-items-center" href="index.html"><span class="sp-mark" aria-hidden="true">B</span>Bootstrap 6<span class="badge badge-subtle theme-primary ms-2">демо</span></a>
     <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-expanded="false" aria-label="Открыть меню">
       <span class="navbar-toggler-icon" aria-hidden="true"></span>
     </button>
@@ -88,8 +88,8 @@ FOOTER = """<footer class="border-top border-subtle bg-1 mt-12">
   <div class="container py-9">
     <div class="row g-7">
       <div class="md:col-5">
-        <p class="fw-semibold mb-2"><span class="sp-mark" aria-hidden="true">6</span>Шестая полоса</p>
-        <p class="fg-2 fs-sm mb-3">Вымышленное сетевое издание, собранное для исследования «Bootstrap 6: разбор фреймворка на смоделированном сайте». Имена, тексты и цифры придуманы, кроме сведений о самом фреймворке.</p>
+        <p class="fw-semibold mb-2"><span class="sp-mark" aria-hidden="true">B</span>Bootstrap 6 демо</p>
+        <p class="fg-2 fs-sm mb-3">Вымышленное сетевое издание, собранное для исследования «Bootstrap 6 на смоделированном сайте». Имена, тексты и цифры придуманы, кроме сведений о самом фреймворке.</p>
         <p class="fg-3 fs-xs mb-0">Bootstrap 6.0.0-alpha.1 · сборка демо {stamp} · редакция {version}</p>
       </div>
       <div class="sm:col-6 md:col-3 md:offset-1">
@@ -125,12 +125,12 @@ def build():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)} — Шестая полоса</title>
+<title>{html.escape(title)} — Bootstrap 6 демо</title>
 <meta name="description" content="{html.escape(desc)}">
-<meta property="og:title" content="{html.escape(title)} — Шестая полоса">
+<meta property="og:title" content="{html.escape(title)} — Bootstrap 6 демо">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
-<!-- Шестая полоса · демонстрационный сайт исследования Bootstrap 6 · сборка {STAMP} · редакция {VERSION} -->
+<!-- Bootstrap 6 демо · демонстрационный сайт исследования «Bootstrap 6 на смоделированном сайте» · сборка {STAMP} · редакция {VERSION} -->
 <script>try{{var t=localStorage.getItem('sp-theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-bs-theme',t)}}catch(e){{}}</script>
 <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="assets/site.css">

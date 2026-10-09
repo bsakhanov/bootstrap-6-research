@@ -1,8 +1,8 @@
 # Bootstrap 6 на смоделированном сайте
 
-**Исследование-доклад о шестом поколении фреймворка — архитектура, вёрстка, дизайн — проверенное на вымышленном новостном сайте «Шестая полоса» и 43 снимках экрана**
+**Исследование-доклад о шестом поколении фреймворка — архитектура, вёрстка, дизайн — проверенное на вымышленном новостном сайте — демо-сайте Bootstrap 6 — и 43 снимках экрана**
 
-*Редакция 1.0 · 9 октября 2026 · автор — Бейбит Саханов, Астана*
+*Редакция 1.0.1 · 9 октября 2026 · автор — Бейбит Саханов, Астана*
 
 [English version below](#bootstrap-6-on-a-modelled-site)
 
@@ -19,7 +19,7 @@
 | папка | что внутри |
 |---|---|
 | `doklad/` | исследование-доклад: самодостаточный HTML (15 глав, 5 интерактивных графиков, 4 схемы, 58 источников, реестры расхождений и белых пятен, глоссарий) и его Markdown-исходник |
-| `demo/` | демо-сайт «Шестая полоса» на Bootstrap 6.0.0-alpha.1 — 7 страниц, Bootstrap подключён локально, собственные стили в `@layer custom` только на токенах |
+| `demo/` | демо-сайт Bootstrap 6 на версии 6.0.0-alpha.1 — 7 страниц, Bootstrap подключён локально, собственные стили в `@layer custom` только на токенах |
 | `skrinshoty/` | «Сайт в скриншотах»: 43 экрана в Chromium 153 (десктоп 1440 px, телефон 390 px, тёмная схема, открытые состояния) с разбором; оригиналы PNG в масштабе 2× и превью JPEG |
 | `redkollegiya/` | отчёт вычитки по методологии языкового прогона (Чуковский → Аграновский ∥ Слопотрон → Розенталь → Мильчин) |
 | `tools/` | всё для воспроизведения: сборщик доклада с графиками и схемами, сборщик демо-сайта, снимщик экранов на Playwright, скрипт статистики CSS, обёртка типографа |
@@ -55,6 +55,7 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 ## Версии
 
+- **1.0.1** — 9 октября 2026: демо-сайт назван прямо — «демо-сайт Bootstrap 6» вместо вымышленного имени; снимки, доклад и страница скриншотов пересобраны.
 - **1.0** — 9 октября 2026: первая редакция доклада, демо-сайта и разбора в скриншотах.
 
 ## Лицензия
@@ -65,9 +66,9 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 # Bootstrap 6 on a Modelled Site
 
-**A research report on the sixth generation of the framework — architecture, markup, design — tested on a fictional news site, "Page Six", and 43 screenshots**
+**A research report on the sixth generation of the framework — architecture, markup, design — tested on a fictional news site built as a Bootstrap 6 demo, and 43 screenshots**
 
-*Edition 1.0 · 9 October 2026 · by Beibit Sakhanov, Astana*
+*Edition 1.0.1 · 9 October 2026 · by Beibit Sakhanov, Astana*
 
 ## What this is
 
@@ -80,7 +81,7 @@ To judge by markup rather than by the announcement, a seven-page site was built 
 | folder | inside |
 |---|---|
 | `doklad/` | the research report: a self-contained HTML (15 chapters, 5 interactive charts, 4 diagrams, 58 sources, registers of discrepancies and gaps, glossary) and its Markdown source |
-| `demo/` | the demo site "Page Six" on Bootstrap 6.0.0-alpha.1 — 7 pages, Bootstrap bundled locally, own styles in `@layer custom` built on tokens only |
+| `demo/` | the Bootstrap 6 demo site on 6.0.0-alpha.1 — 7 pages, Bootstrap bundled locally, own styles in `@layer custom` built on tokens only |
 | `skrinshoty/` | the screenshot walkthrough: 43 screens in Chromium 153 (desktop 1440 px, phone 390 px, dark scheme, open states) with analysis; 2× PNG originals and JPEG previews |
 | `redkollegiya/` | the proofreading report produced with the author's editorial methodology |
 | `tools/` | everything needed to reproduce: report builder with charts and diagrams, demo-site builder, Playwright screenshot runner, CSS statistics script, typographer wrapper |

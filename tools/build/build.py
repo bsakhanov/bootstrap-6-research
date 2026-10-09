@@ -216,7 +216,7 @@ def diagram_layers():
     s.append(label(820, 60, 'приоритет растёт', STEEL, 'start', 12))
     s.append(label(820, 80, 'снизу вверх', STEEL, 'start', 12))
     s.append(label(820, 130, 'правило слоя utilities', SOFT, 'start', 12)); s.append(label(820, 148, 'перекроет правило components,', SOFT, 'start', 12)); s.append(label(820, 166, 'как бы ни был длинен селектор', SOFT, 'start', 12))
-    s.append(label(820, 220, 'стили сайта «Шестая полоса»', SOFT, 'start', 12)); s.append(label(820, 238, 'лежат в слое custom:', SOFT, 'start', 12)); s.append(label(820, 256, 'выше компонентов, ниже утилит', SOFT, 'start', 12))
+    s.append(label(820, 220, 'стили демо-сайта Bootstrap 6', SOFT, 'start', 12)); s.append(label(820, 238, 'лежат в слое custom:', SOFT, 'start', 12)); s.append(label(820, 256, 'выше компонентов, ниже утилит', SOFT, 'start', 12))
     s.append(label(820, 310, 'AGENTS.md перечисляет ещё слой', SOFT, 'start', 12)); s.append(label(820, 328, 'theme — в коде его нет (Р-03)', SOFT, 'start', 12))
     s.append('</svg>'); return ''.join(s)
 
@@ -252,7 +252,7 @@ def diagram_site():
              ('Формы', 'form-field, комбобокс,', 'otp, strength, календарь'), ('Токены', 'палитра 16×13, темы,', 'перестройка, слои'),
              ('Редакция', 'колонка → ящик,', 'степпер, таблица')]
     s = [f'<svg viewBox="0 0 1100 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Карта демо-сайта">{DEFS}']
-    s.append(box(430, 20, 240, 56, '«Шестая полоса»', 'build_demo.py · каркас + 7 фрагментов', fill='#E9EEF0'))
+    s.append(box(430, 20, 240, 56, 'Демо-сайт Bootstrap 6', 'build_demo.py · каркас + 7 фрагментов', fill='#E9EEF0'))
     for i, (t, a, b) in enumerate(pages):
         x = 20 + i * 152; y = 150
         s.append(arrow(550, 76, x + 68, y))
@@ -398,7 +398,7 @@ doc = f"""<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{html.escape(title)} — {html.escape(subtitle)}</title>
-<meta name="description" content="Исследование-доклад о Bootstrap 6.0.0-alpha.1: архитектура токенов и слоёв, цвет в oklch, сетка с префиксами и контейнерными запросами, компоненты на нативных элементах, формы, JavaScript на ESM, навыки для агентов — проверено на смоделированном новостном сайте «Шестая полоса» с 43 снимками в Chromium 153.">
+<meta name="description" content="Исследование-доклад о Bootstrap 6.0.0-alpha.1: архитектура токенов и слоёв, цвет в oklch, сетка с префиксами и контейнерными запросами, компоненты на нативных элементах, формы, JavaScript на ESM, навыки для агентов — проверено на смоделированном новостном сайте на Bootstrap 6 с 43 снимками в Chromium 153.">
 <meta name="author" content="Бейбит Саханов">
 <link rel="canonical" href="{CANONICAL}">
 <meta property="og:title" content="{html.escape(title)}">
@@ -421,9 +421,9 @@ doc = f"""<!DOCTYPE html>
 <header class="hero-report" id="top"><div class="wrap hero-inner">
 <p class="eyebrow">исследование-доклад · {html.escape(date)}</p>
 <h1>{html.escape(title)}</h1>
-<p class="hero-lead">{html.escape(subtitle).capitalize()}: что шестое поколение переносит из препроцессора в браузер, чем это оплачено и как это выглядит на семи страницах вымышленного издания «Шестая полоса».</p>
+<p class="hero-lead">{html.escape(subtitle).capitalize()}: что шестое поколение переносит из препроцессора в браузер, чем это оплачено и как это выглядит на семи страницах вымышленного издания — демо-сайта Bootstrap 6.</p>
 <p class="hero-sub">Автор — Бейбит Саханов, Астана. Факты сверены по анонсу, документации и исходному коду ветки main на 8–9 октября 2026 года; расхождения и белые пятна вынесены в реестры, а не спрятаны в тексте.</p>
-<div class="hero-links"><a href="../demo/index.html">демо-сайт «Шестая полоса»</a><a href="../skrinshoty/">сайт в скриншотах</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a><a href="https://bsakhanov.github.io/joomla-6-newsroom-research/">предыдущий доклад: Joomla 6</a></div>
+<div class="hero-links"><a href="../demo/index.html">демо-сайт Bootstrap 6</a><a href="../skrinshoty/">сайт в скриншотах</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a><a href="https://bsakhanov.github.io/joomla-6-newsroom-research/">предыдущий доклад: Joomla 6</a></div>
 <div class="method-box"><p class="eyebrow">метод</p><p>Источники — анонс проекта, 141 файл документации, исходный код Sass и TypeScript ветки main, пакеты npm шестой альфы и версии 5.3.8. Статистика CSS посчитана по скомпилированным файлам скриптом из репозитория исследования. Утверждения о вёрстке проверены на смоделированном сайте из семи страниц в Chromium 153 через Playwright. Каждое утверждение несёт номер источника; список построен по первому упоминанию. Текст прошёл четыре прохода языкового прогона и вычитку Редколлегией.</p></div>
 </div></header>
 <main>

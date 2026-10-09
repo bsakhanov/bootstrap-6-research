@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""shots.py — снимает экраны демо-сайта «Шестая полоса» в настоящем Chromium 153 через Playwright.
+"""shots.py — снимает экраны демо-сайта Bootstrap 6 в настоящем Chromium 153 через Playwright.
 
 Запуск: python3 tools/screenshots/shots.py http://127.0.0.1:8077 skrinshoty/img
 Требуется бинарник Chromium (переменная CHROMIUM) и python-пакет playwright ≥ 1.56.
