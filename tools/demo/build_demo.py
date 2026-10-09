@@ -12,7 +12,7 @@ import datetime, html, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 PAGES = ROOT / 'tools/demo/pages'
 OUT = ROOT / 'demo'
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 STAMP = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
 
 NAV = [('index', 'Главная'), ('rubrika', 'Рубрика'), ('statya', 'Статья'),
@@ -130,6 +130,8 @@ def build():
 <meta property="og:title" content="{html.escape(title)} — Bootstrap 6 демо">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://webmarka.kz/research/bootstrap-6/demo/{"" if key == "index" else key + ".html"}">
+<meta property="og:url" content="https://webmarka.kz/research/bootstrap-6/demo/{"" if key == "index" else key + ".html"}">
 <!-- Bootstrap 6 демо · демонстрационный сайт исследования «Bootstrap 6 на смоделированном сайте» · сборка {STAMP} · редакция {VERSION} -->
 <script>try{{var t=localStorage.getItem('sp-theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-bs-theme',t)}}catch(e){{}}</script>
 <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">

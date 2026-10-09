@@ -2,7 +2,7 @@
 
 **Исследование-доклад о шестом поколении фреймворка — архитектура, вёрстка, дизайн — проверенное на вымышленном новостном сайте — демо-сайте Bootstrap 6 — и 43 снимках экрана**
 
-*Редакция 1.0.1 · 9 октября 2026 · автор — Бейбит Саханов, Астана*
+*Редакция 1.0.2 · 9 октября 2026 · автор — Бейбит Саханов, Астана*
 
 [English version below](#bootstrap-6-on-a-modelled-site)
 
@@ -27,7 +27,7 @@
 
 ## Как смотреть
 
-GitHub Pages: [титульная](https://bsakhanov.github.io/bootstrap-6-research/) · [доклад](https://bsakhanov.github.io/bootstrap-6-research/doklad/bootstrap-6-research.html) · [демо-сайт](https://bsakhanov.github.io/bootstrap-6-research/demo/index.html) · [сайт в скриншотах](https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/). Все HTML-файлы открываются и с диска; демо-сайту для скриптов нужен любой локальный веб-сервер (`python3 -m http.server`), потому что Bootstrap 6 подключается модулем `type="module"`.
+Основная копия — на сайте автора: [webmarka.kz/research/bootstrap-6/](https://webmarka.kz/research/bootstrap-6/) · [доклад](https://webmarka.kz/research/bootstrap-6/doklad/bootstrap-6-research.html) · [демо-сайт](https://webmarka.kz/research/bootstrap-6/demo/) · [сайт в скриншотах](https://webmarka.kz/research/bootstrap-6/skrinshoty/). Канонические адреса всех страниц указывают туда. Зеркало на GitHub Pages: [титульная](https://bsakhanov.github.io/bootstrap-6-research/) · [доклад](https://bsakhanov.github.io/bootstrap-6-research/doklad/bootstrap-6-research.html) · [демо-сайт](https://bsakhanov.github.io/bootstrap-6-research/demo/index.html) · [сайт в скриншотах](https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/). Все HTML-файлы открываются и с диска; демо-сайту для скриптов нужен любой локальный веб-сервер (`python3 -m http.server`), потому что Bootstrap 6 подключается модулем `type="module"`.
 
 Демо-сайт требует браузера не ниже порога Bootstrap 6: Chrome и Edge 130, Firefox 132, Safari 18.
 
@@ -55,6 +55,7 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 ## Версии
 
+- **1.0.2** — 9 октября 2026: основная копия — webmarka.kz/research/bootstrap-6/; канонические адреса всех страниц переведены туда, GitHub Pages объявлен зеркалом; ссылки на доклад о Joomla ведут на его основную копию.
 - **1.0.1** — 9 октября 2026: демо-сайт назван прямо — «демо-сайт Bootstrap 6» вместо вымышленного имени; снимки, доклад и страница скриншотов пересобраны.
 - **1.0** — 9 октября 2026: первая редакция доклада, демо-сайта и разбора в скриншотах.
 
@@ -68,7 +69,7 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 **A research report on the sixth generation of the framework — architecture, markup, design — tested on a fictional news site built as a Bootstrap 6 demo, and 43 screenshots**
 
-*Edition 1.0.1 · 9 October 2026 · by Beibit Sakhanov, Astana*
+*Edition 1.0.2 · 9 October 2026 · by Beibit Sakhanov, Astana*
 
 ## What this is
 
@@ -89,7 +90,7 @@ To judge by markup rather than by the announcement, a seven-page site was built 
 
 ## How to view
 
-GitHub Pages: [landing](https://bsakhanov.github.io/bootstrap-6-research/) · [report](https://bsakhanov.github.io/bootstrap-6-research/doklad/bootstrap-6-research.html) · [demo site](https://bsakhanov.github.io/bootstrap-6-research/demo/index.html) · [walkthrough](https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/). All HTML files open from disk; the demo site needs any local web server for its scripts because Bootstrap 6 loads as an ES module. The texts are in Russian.
+The primary copy lives on the author's site: [webmarka.kz/research/bootstrap-6/](https://webmarka.kz/research/bootstrap-6/) — canonical URLs point there. GitHub Pages mirror: [landing](https://bsakhanov.github.io/bootstrap-6-research/) · [report](https://bsakhanov.github.io/bootstrap-6-research/doklad/bootstrap-6-research.html) · [demo site](https://bsakhanov.github.io/bootstrap-6-research/demo/index.html) · [walkthrough](https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/). All HTML files open from disk; the demo site needs any local web server for its scripts because Bootstrap 6 loads as an ES module. The texts are in Russian.
 
 ## Method
 

@@ -19,7 +19,7 @@ SRC = ROOT / 'tools/build/doklad-bootstrap-6.md'
 OUT_HTML = ROOT / 'doklad/bootstrap-6-research.html'
 OUT_MD = ROOT / 'doklad/bootstrap-6-research.md'
 CHARTJS = (ROOT / 'tools/build/chart.umd.js').read_text(encoding='utf-8')
-CANONICAL = 'https://bsakhanov.github.io/bootstrap-6-research/doklad/bootstrap-6-research.html'
+CANONICAL = 'https://webmarka.kz/research/bootstrap-6/doklad/bootstrap-6-research.html'  # основная копия — webmarka.kz; GitHub Pages — зеркало
 
 D = 'https://getbootstrap.com/docs/6.0'
 G = 'https://github.com/twbs/bootstrap'
@@ -78,7 +78,7 @@ SOURCES = {
     'wcag222': 'Success Criterion 2.2.2 Pause, Stop, Hide // WCAG 2.1, W3C. URL: https://www.w3.org/TR/WCAG21/#pause-stop-hide',
     'wcag1413': 'Understanding Success Criterion 1.4.13: Content on Hover or Focus // W3C WAI. URL: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html',
     'discussions': 'v6 feedback // GitHub Discussions, twbs. URL: https://github.com/orgs/twbs/discussions/categories/v6-feedback',
-    'joomla-report': 'Саханов Б. Joomla 6 для новостной редакции : исследование-доклад, редакция 1.1, 8 октября 2026. URL: https://bsakhanov.github.io/joomla-6-newsroom-research/',
+    'joomla-report': 'Саханов Б. Joomla 6 для новостной редакции : исследование-доклад, редакция 1.1, 8 октября 2026. URL: https://webmarka.kz/research/joomla-6-newsroom/',
     'joomla-package': 'package.json, ветка 6.1-dev // GitHub, joomla/joomla-cms. URL: https://github.com/joomla/joomla-cms/blob/6.1-dev/package.json',
     'chromium': 'Sparticuz/chromium, релиз v153.0.0 // GitHub. URL: https://github.com/Sparticuz/chromium/releases/tag/v153.0.0',
     'playwright': 'Playwright for Python : документация. URL: https://playwright.dev/python/',
@@ -405,7 +405,7 @@ doc = f"""<!DOCTYPE html>
 <meta property="og:description" content="{html.escape(subtitle)}. {html.escape(date)}.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{CANONICAL}">
-<meta property="og:image" content="https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/preview/e08-geroi.jpg">
+<meta property="og:image" content="https://webmarka.kz/research/bootstrap-6/skrinshoty/preview/e08-geroi.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -423,7 +423,7 @@ doc = f"""<!DOCTYPE html>
 <h1>{html.escape(title)}</h1>
 <p class="hero-lead">{html.escape(subtitle).capitalize()}: что шестое поколение переносит из препроцессора в браузер, чем это оплачено и как это выглядит на семи страницах вымышленного издания — демо-сайта Bootstrap 6.</p>
 <p class="hero-sub">Автор — Бейбит Саханов, Астана. Факты сверены по анонсу, документации и исходному коду ветки main на 8–9 октября 2026 года; расхождения и белые пятна вынесены в реестры, а не спрятаны в тексте.</p>
-<div class="hero-links"><a href="../demo/index.html">демо-сайт Bootstrap 6</a><a href="../skrinshoty/">сайт в скриншотах</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a><a href="https://bsakhanov.github.io/joomla-6-newsroom-research/">предыдущий доклад: Joomla 6</a></div>
+<div class="hero-links"><a href="../demo/index.html">демо-сайт Bootstrap 6</a><a href="../skrinshoty/">сайт в скриншотах</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a><a href="https://webmarka.kz/research/bootstrap-6/">основная копия на webmarka.kz</a><a href="https://webmarka.kz/research/joomla-6-newsroom/">предыдущий доклад: Joomla 6</a></div>
 <div class="method-box"><p class="eyebrow">метод</p><p>Источники — анонс проекта, 141 файл документации, исходный код Sass и TypeScript ветки main, пакеты npm шестой альфы и версии 5.3.8. Статистика CSS посчитана по скомпилированным файлам скриптом из репозитория исследования. Утверждения о вёрстке проверены на смоделированном сайте из семи страниц в Chromium 153 через Playwright. Каждое утверждение несёт номер источника; список построен по первому упоминанию. Текст прошёл четыре прохода языкового прогона и вычитку Редколлегией.</p></div>
 </div></header>
 <main>

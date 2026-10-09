@@ -1,6 +1,6 @@
 <!-- title: Bootstrap 6 на смоделированном сайте -->
 <!-- subtitle: исследование-доклад о шестом поколении фреймворка: архитектура, вёрстка, дизайн -->
-<!-- date: редакция 1.0.1 · 9 октября 2026 -->
+<!-- date: редакция 1.0.2 · 9 октября 2026 -->
 
 
 ## Резюме {#rezyume}
@@ -357,7 +357,7 @@ Astro · Bootstrap 5.3.8 · Cassiopeia и Atum · Chart.js · Chromium 153 · C
 49. llms.txt // getbootstrap.com. URL: https://getbootstrap.com/llms.txt
 50. The /llms.txt file // llmstxt.org : сайт. URL: https://llmstxt.org/
 51. skills/ — навыки для агентов, ветка main // GitHub, twbs/bootstrap. URL: https://github.com/twbs/bootstrap/tree/main/skills
-52. Саханов Б. Joomla 6 для новостной редакции : исследование-доклад, редакция 1.1, 8 октября 2026. URL: https://bsakhanov.github.io/joomla-6-newsroom-research/
+52. Саханов Б. Joomla 6 для новостной редакции : исследование-доклад, редакция 1.1, 8 октября 2026. URL: https://webmarka.kz/research/joomla-6-newsroom/
 53. Install // Bootstrap 6 documentation. URL: https://getbootstrap.com/docs/6.0/getting-started/install/
 54. Sparticuz/chromium, релиз v153.0.0 // GitHub. URL: https://github.com/Sparticuz/chromium/releases/tag/v153.0.0
 55. Playwright for Python : документация. URL: https://playwright.dev/python/
