@@ -12,7 +12,7 @@ import datetime, html, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 PAGES = ROOT / 'tools/demo/pages'
 OUT = ROOT / 'demo'
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 STAMP = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
 
 NAV = [('index', 'Главная'), ('rubrika', 'Рубрика'), ('statya', 'Статья'),

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """build_shots.py — страница «Сайт в скриншотах»: 46 экранов демо-сайта Bootstrap 6 с разбором.
-Превью (JPEG 1200 px) лежат в skrinshoty/preview, оригиналы (PNG, масштаб 2×) — в skrinshoty/img."""
+Превью (WebP 1200 px) лежат в skrinshoty/preview, оригиналы (PNG, масштаб 2×) — в skrinshoty/img."""
 import html, pathlib
 from PIL import Image
 
@@ -112,7 +112,7 @@ def main():
             tall = h > 2400
             cls = 'shot' + (' tall' if tall else '') + (' mobile' if mobile else '')
             figs.append(f'<figure class="{cls}" id="{name}"><div class="shot-head"><h3>{t}</h3><span class="meta">{name}.png · {w}×{h} px · {png.stat().st_size // 1024} КБ</span></div>'
-                        f'<a class="img" href="img/{name}.png"><img src="preview/{name}.jpg" alt="{html.escape(t)}" loading="lazy" width="{min(w, 1200) // 2 * 2}"></a><figcaption>{text}</figcaption></figure>')
+                        f'<a class="img" href="https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/img/{name}.png"><img src="preview/{name}.webp" alt="{html.escape(t)}" loading="lazy" width="{min(w, 1200) // 2 * 2}"></a><figcaption>{text}</figcaption></figure>')
         body = ''.join(figs)
         if sid == 'mobile':
             body = f'<div class="grid2">{body}</div>'
@@ -126,7 +126,7 @@ def main():
 <meta name="author" content="Бейбит Саханов">
 <link rel="canonical" href="https://webmarka.kz/research/bootstrap-6/skrinshoty/">
 <meta property="og:title" content="Сайт в скриншотах — Bootstrap 6 на смоделированном сайте"><meta property="og:type" content="article">
-<meta property="og:url" content="https://webmarka.kz/research/bootstrap-6/skrinshoty/"><meta property="og:image" content="https://webmarka.kz/research/bootstrap-6/skrinshoty/preview/e08-geroi.jpg">
+<meta property="og:url" content="https://webmarka.kz/research/bootstrap-6/skrinshoty/"><meta property="og:image" content="https://webmarka.kz/research/bootstrap-6/skrinshoty/preview/e08-geroi.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap" rel="stylesheet">
 <style>{CSS}</style>
@@ -134,10 +134,10 @@ def main():
 <body>
 <nav class="topnav"><div class="topnav-inner"><a class="topnav-mark" href="../">bootstrap 6 · сайт в скриншотах</a><div class="topnav-links">{nav}<a href="../doklad/bootstrap-6-research.html">доклад</a><a href="../demo/index.html">демо-сайт</a></div></div></nav>
 <header class="hero"><div class="wrap">
-<p class="eyebrow">приложение к исследованию · редакция 1.0.2 · 9 октября 2026</p>
+<p class="eyebrow">приложение к исследованию · редакция 1.0.3 · 9 октября 2026</p>
 <h1>Демо-сайт Bootstrap 6 в скриншотах</h1>
 <p class="lead">{total} экранов демо-сайта на Bootstrap 6.0.0-alpha.1, снятых в Chromium 153.0.8010.0 через Playwright 1.56 в масштабе 2×: семь страниц на десктопе и телефоне, тёмная схема, открытые состояния и крупные планы — с разбором того, что на каждом экране делает фреймворк.</p>
-<p class="sub">Клик по снимку открывает оригинал PNG; на странице показаны превью JPEG шириной 1200 пикселей. Тёмная схема включена эмуляцией системного предпочтения, а не атрибутом. Автор — Бейбит Саханов, Астана.</p>
+<p class="sub">Клик по снимку открывает оригинал PNG; на странице показаны превью WebP шириной 1200 пикселей; оригиналы PNG лежат в репозитории на GitHub Pages. Тёмная схема включена эмуляцией системного предпочтения, а не атрибутом. Автор — Бейбит Саханов, Астана.</p>
 <div class="links"><a href="../demo/index.html">открыть демо-сайт</a><a href="../doklad/bootstrap-6-research.html">читать доклад</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a></div>
 </div></header>
 <main>{''.join(parts)}</main>
