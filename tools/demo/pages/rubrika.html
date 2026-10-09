@@ -1,0 +1,145 @@
+Рубрика «Технологии»
+Страница рубрики: навигация с приоритетом Priority+, комбобокс сортировки, лента горизонтальных карточек, скелет загрузки, отзывчивый ящик фильтров и пагинация.
+<main id="main" class="container sp-section">
+  <header class="mb-7">
+    <p class="sp-kicker mb-2">рубрика</p>
+    <h1 class="fs-4xl fw-semibold mb-3">Технологии</h1>
+    <p class="fg-2 text-pretty mb-0" style="max-width: 70ch">Всё о том, как устроены цифровые вещи вокруг нас: от фреймворков до станций связи. Подрубрики ниже — компонент <code>nav-overflow</code>: лишние пункты он прячет в меню «ещё», измеряя ширину контейнера.</p>
+  </header>
+
+  <div class="d-flex flex-wrap align-items-center gap-5 mb-7">
+    <div class="nav-overflow flex-grow-1" data-bs-toggle="nav-overflow" data-bs-more-text="Ещё">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Все</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Веб</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Связь</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Дизайн-системы</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Доступность</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Открытый код</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Инструменты</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Интервью</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Архив</a></li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn-outline theme-secondary lg:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#filterDrawer" aria-controls="filterDrawer"><svg class="sp-icon me-1" width="16" height="16"><use href="#i-filter"/></svg>Фильтры</button>
+      <div class="position-relative">
+        <button class="form-control combobox-toggle" type="button" data-bs-toggle="combobox" data-bs-name="sort" data-bs-placeholder="Сначала новые" aria-label="Сортировка">
+          <span class="combobox-value">Сначала новые</span>
+          <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item active" type="button" data-bs-value="new">Сначала новые</button>
+          <button class="menu-item" type="button" data-bs-value="read">Самые читаемые</button>
+          <button class="menu-item" type="button" data-bs-value="long">Длинные тексты</button>
+          <button class="menu-item" type="button" data-bs-value="short">Короткие заметки</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-9">
+    <div class="lg:col-8">
+      <div class="vstack gap-5">
+        <article class="card card-row hover-lift">
+          <div class="sp-img sp-img-4x3 flex-none" style="inline-size: 14rem" data-label="4:3" role="img" aria-label="Заглушка"></div>
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2"><span class="badge badge-subtle theme-primary">дизайн-системы</span><span class="fs-xs fg-3">сегодня</span></div>
+            <h2 class="fs-lg fw-semibold text-balance"><a class="fg-body text-decoration-none stretched-link" href="statya.html">Шестой выпуск Bootstrap переписал цветовую модель</a></h2>
+            <p class="fs-sm fg-2 mb-0">Оттенки в oklch, двенадцать ступеней считает браузер, компоненты красятся композицией классов.</p>
+          </div>
+        </article>
+        <article class="card card-row hover-lift">
+          <div class="sp-img sp-img-4x3 sp-img-green flex-none" style="inline-size: 14rem" data-label="4:3" role="img" aria-label="Заглушка"></div>
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2"><span class="badge badge-subtle theme-success">открытый код</span><span class="fs-xs fg-3">вчера</span></div>
+            <h2 class="fs-lg fw-semibold text-balance"><a class="fg-body text-decoration-none stretched-link" href="statya.html">Файлы-навыки для агентов: как проект объясняет машине свои правила</a></h2>
+            <p class="fs-sm fg-2 mb-0">В репозитории появилась папка skills с одиннадцатью инструкциями — от установки до миграции с четвёртой версии.</p>
+          </div>
+        </article>
+        <article class="card card-row hover-lift">
+          <div class="sp-img sp-img-4x3 sp-img-warm flex-none" style="inline-size: 14rem" data-label="4:3" role="img" aria-label="Заглушка"></div>
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2"><span class="badge badge-subtle theme-danger">доступность</span><span class="fs-xs fg-3">2 дня назад</span></div>
+            <h2 class="fs-lg fw-semibold text-balance"><a class="fg-body text-decoration-none stretched-link" href="statya.html">Подсказка, которая не исчезает: почему всплывашки теперь ждут курсор</a></h2>
+            <p class="fs-sm fg-2 mb-0">Требование WCAG 1.4.13 выполнено на уровне ядра: ссылку внутри подсказки можно достать мышью.</p>
+          </div>
+        </article>
+        <article class="card card-row hover-lift">
+          <div class="sp-img sp-img-4x3 sp-img-violet flex-none" style="inline-size: 14rem" data-label="4:3" role="img" aria-label="Заглушка"></div>
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2"><span class="badge badge-subtle theme-accent">интервью</span><span class="fs-xs fg-3">3 дня назад</span></div>
+            <h2 class="fs-lg fw-semibold text-balance"><a class="fg-body text-decoration-none stretched-link" href="statya.html">«Люди почти не пишут код, но строят больше программ, чем когда-либо»</a></h2>
+            <p class="fs-sm fg-2 mb-0">Разговор о том, зачем в 2026 году выпускать новую версию библиотеки, которую установили больше полутора миллиардов раз.</p>
+          </div>
+        </article>
+        <article class="card card-row hover-lift">
+          <div class="sp-img sp-img-4x3 sp-img-ink flex-none" style="inline-size: 14rem" data-label="4:3" role="img" aria-label="Заглушка"></div>
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2"><span class="badge badge-subtle theme-info">инструменты</span><span class="fs-xs fg-3">неделю назад</span></div>
+            <h2 class="fs-lg fw-semibold text-balance"><a class="fg-body text-decoration-none stretched-link" href="statya.html">Rolldown вместо Rollup и Babel: сборщик, который сам снимает типы</a></h2>
+            <p class="fs-sm fg-2 mb-0">Из репозитория исчез целый слой инструментов; тесты переехали в Vitest и настоящий Chromium.</p>
+          </div>
+        </article>
+        <article class="card card-row" aria-hidden="true">
+          <div class="sp-img sp-img-4x3 flex-none placeholder-wave" style="inline-size: 14rem; background: var(--bs-bg-3)" data-label="загрузка"></div>
+          <div class="card-body placeholder-wave">
+            <span class="placeholder col-3 mb-3"></span>
+            <h2 class="fs-lg mb-2"><span class="placeholder col-9"></span></h2>
+            <p class="mb-0"><span class="placeholder col-7"></span> <span class="placeholder col-4"></span></p>
+          </div>
+        </article>
+      </div>
+      <nav aria-label="Страницы рубрики" class="mt-9 d-flex justify-content-center">
+        <ul class="pagination theme-primary mb-0">
+          <li class="page-item disabled"><a class="page-link" href="#" aria-disabled="true">Назад</a></li>
+          <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><span class="page-link">…</span></li>
+          <li class="page-item"><a class="page-link" href="#">12</a></li>
+          <li class="page-item"><a class="page-link" href="#">Дальше</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <aside class="lg:col-4">
+      <dialog class="lg:drawer drawer-end" tabindex="-1" id="filterDrawer" aria-labelledby="filterDrawerLabel">
+        <div class="drawer-header">
+          <h2 class="drawer-title fs-lg" id="filterDrawerLabel">Фильтры</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button>
+        </div>
+        <div class="drawer-body vstack gap-5">
+          <div class="card">
+            <div class="card-header fw-semibold">Популярное за неделю</div>
+            <ol class="list-group list-group-flush list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start"><span class="ms-2 me-auto">Одиннадцать слоёв каскада</span><span class="badge badge-subtle theme-secondary">12 тыс.</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-start"><span class="ms-2 me-auto">Карусель на scroll-snap</span><span class="badge badge-subtle theme-secondary">9 тыс.</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-start"><span class="ms-2 me-auto">Степпер, аватар, чип</span><span class="badge badge-subtle theme-secondary">7 тыс.</span></li>
+            </ol>
+          </div>
+          <div class="card card-body gap-4">
+            <p class="fw-semibold mb-0">Показывать</p>
+            <div class="form-field"><input type="checkbox" class="check" id="fLong" checked><label for="fLong">Длинные тексты</label></div>
+            <div class="form-field"><input type="checkbox" class="check" id="fVideo"><label for="fVideo">С видео</label></div>
+            <div class="form-field"><input type="checkbox" class="check" id="fInt" checked><label for="fInt">Интервью</label></div>
+            <hr class="my-1">
+            <p class="fw-semibold mb-0">Период</p>
+            <div class="form-field"><input type="radio" class="radio" name="period" id="pWeek" checked><label for="pWeek">Неделя</label></div>
+            <div class="form-field"><input type="radio" class="radio" name="period" id="pMonth"><label for="pMonth">Месяц</label></div>
+            <div class="form-field"><input type="radio" class="radio" name="period" id="pAll"><label for="pAll">Всё время</label></div>
+          </div>
+          <div class="card card-subtle theme-success">
+            <div class="card-body">
+              <div class="form-field">
+                <div class="switch"><input type="checkbox" id="rubSub" role="switch" switch></div>
+                <div class="form-field-content"><label for="rubSub" class="fw-semibold">Подписка на рубрику</label><small class="form-text">Письмо раз в неделю.</small></div>
+              </div>
+            </div>
+          </div>
+          <p class="fs-xs fg-3 mb-0">На экранах уже 1024 px этот блок — обычная колонка; ниже он превращается в ящик <code>lg:drawer</code>, который открывает кнопка «Фильтры».</p>
+        </div>
+      </dialog>
+    </aside>
+  </div>
+</main>

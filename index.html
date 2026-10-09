@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap 6 на смоделированном сайте — исследование</title>
+<meta name="description" content="Исследование-доклад о Bootstrap 6.0.0-alpha.1, демо-сайт «Шестая полоса» из семи страниц и 43 снимка экрана с разбором. Бейбит Саханов, редакция 1.0, 9 октября 2026.">
+<meta name="author" content="Бейбит Саханов">
+<link rel="canonical" href="https://bsakhanov.github.io/bootstrap-6-research/">
+<meta property="og:title" content="Bootstrap 6 на смоделированном сайте"><meta property="og:type" content="website">
+<meta property="og:description" content="Доклад, демо-сайт и 43 снимка: что шестое поколение Bootstrap переносит из препроцессора в браузер и чем это оплачено.">
+<meta property="og:image" content="https://bsakhanov.github.io/bootstrap-6-research/skrinshoty/preview/e08-geroi.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F3F4EF;--paper-raised:#FBFBF8;--ink:#171A1C;--ink-soft:#565D60;--ink-faint:#8B9190;--line:#DBDDD2;--line-strong:#C7CABC;--accent:#B54A24;--accent-ink:#7C3216;--steel:#33505E;--steel-soft:#DEE6E7;--serif:'Newsreader',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+*,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 40px}@media (max-width:720px){.wrap{padding:0 22px}}
+header{position:relative;overflow:hidden;padding:100px 0 60px}
+header::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(23,26,28,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,26,28,.055) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:linear-gradient(to bottom,black,transparent 82%);mask-image:linear-gradient(to bottom,black,transparent 82%)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--steel);margin:0 0 20px;position:relative}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.04;margin:0 0 26px;max-width:16ch;position:relative}
+.lead{font-size:19px;max-width:720px;margin:0 0 40px;position:relative}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;position:relative}
+.card{display:block;text-decoration:none;background:var(--paper-raised);border:1px solid var(--line-strong);border-radius:2px;padding:24px 26px 22px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card .k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--accent-ink);margin:0 0 10px}
+.card h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin:0 0 10px;line-height:1.2}
+.card p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.shots{padding:50px 0 20px;border-top:1px solid var(--line)}
+.shots .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.shots a{display:block;border:1px solid var(--line);background:var(--paper-raised);padding:6px;border-radius:2px}
+.shots img{display:block;width:100%;height:220px;object-fit:cover;object-position:top}
+.shots figcaption{font-size:12.5px;color:var(--ink-soft);padding:8px 4px 2px;font-family:var(--mono)}
+.facts{padding:40px 0 30px}.facts ul{columns:2;gap:40px;padding-left:1.2em;margin:0;font-size:15px}@media (max-width:720px){.facts ul{columns:1}}
+.facts li{margin:0 0 .5em;break-inside:avoid}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-soft)}
+footer a{color:var(--accent-ink)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="eyebrow">исследование · редакция 1.0 · 9 октября 2026 · Бейбит Саханов</p>
+<h1>Bootstrap 6 на смоделированном сайте</h1>
+<p class="lead">Чем силён шестой выпуск фреймворка и годится ли он уже сегодня для сайтов, которые живут годами. Три работы: доклад с источниками и интерактивными графиками, вымышленное издание «Шестая полоса» из семи страниц, собранное на альфе, и разбор сорока трёх снимков его экранов в настоящем Chromium.</p>
+<div class="cards">
+<a class="card" href="doklad/bootstrap-6-research.html"><p class="k">доклад</p><h2>Исследование-доклад</h2><p>15 глав, 5 интерактивных графиков, 4 схемы, 58 источников, реестры расхождений и белых пятен, глоссарий из 18 терминов</p></a>
+<a class="card" href="demo/index.html"><p class="k">демо-сайт</p><h2>«Шестая полоса»</h2><p>Главная, рубрика, статья, компоненты, формы, площадка токенов, редакционная панель — на Bootstrap 6.0.0-alpha.1, собственные стили только на токенах</p></a>
+<a class="card" href="skrinshoty/"><p class="k">приложение</p><h2>Сайт в скриншотах</h2><p>43 экрана: десктоп и телефон, тёмная схема, открытые диалоги, меню, календарь, комбобокс, перестроенные токены — с разбором каждого</p></a>
+<a class="card" href="https://github.com/bsakhanov/bootstrap-6-research"><p class="k">github</p><h2>Репозиторий</h2><p>Исходники, инструменты воспроизведения, отчёт Редколлегии, журнал редакций, README на двух языках</p></a>
+</div>
+</div></header>
+<section class="shots"><div class="wrap"><div class="grid">
+<figure style="margin:0"><a href="skrinshoty/#e08-geroi"><img src="skrinshoty/preview/e08-geroi.jpg" alt="Герой главной страницы демо-сайта" loading="lazy"><figcaption>главная · герой на clamp()</figcaption></a></figure>
+<figure style="margin:0"><a href="skrinshoty/#18-tokeny-perestroika"><img src="skrinshoty/preview/18-tokeny-perestroika.jpg" alt="Площадка токенов после перестройки" loading="lazy"><figcaption>токены · перестройка в браузере</figcaption></a></figure>
+<figure style="margin:0"><a href="skrinshoty/#07-redakciya"><img src="skrinshoty/preview/07-redakciya.jpg" alt="Редакционная панель" loading="lazy"><figcaption>редакция · панель на lg:drawer</figcaption></a></figure>
+<figure style="margin:0"><a href="skrinshoty/#28-m-menu-drawer"><img src="skrinshoty/preview/28-m-menu-drawer.jpg" alt="Меню сайта на телефоне" loading="lazy"><figcaption>телефон · меню в &lt;dialog&gt;</figcaption></a></figure>
+</div></div></section>
+<section class="facts"><div class="wrap"><ul>
+<li>Первая альфа вышла 8 октября 2026 года, через пять лет и пять месяцев после пятой версии.</li>
+<li>Порог браузеров: Chrome и Edge 130, Firefox 132, Safari 18; ниже него нет ни полифилов, ни префиксов.</li>
+<li>Почти каждая переменная Sass стала переменной CSS: оформление меняется в браузере без пересборки.</li>
+<li>Шестнадцать оттенков в oklch, тринадцать ступеней каждого считает браузер функцией color-mix().</li>
+<li>Диалог и ящик — на нативном &lt;dialog&gt;, аккордеон — на &lt;details name&gt;, карусель — на scroll-snap.</li>
+<li>Сжатый CSS потяжелел с 226 до 372 килобайт, сборка JavaScript — с 78 до 214: цена универсальности.</li>
+</ul></div></section>
+<footer><div class="wrap">English summary in the repository <a href="https://github.com/bsakhanov/bootstrap-6-research#bootstrap-6-on-a-modelled-site">README</a>. Предыдущее исследование: <a href="https://bsakhanov.github.io/joomla-6-newsroom-research/">Joomla 6 для новостной редакции</a>. Тексты и снимки — CC BY 4.0, демо-сайт и инструменты — MIT.</div></footer>
+</body>
+</html>

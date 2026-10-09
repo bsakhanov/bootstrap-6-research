@@ -1,0 +1,15 @@
+Bootstrap 6 на смоделированном сайте / Bootstrap 6 on a Modelled Site
+© 2026 Бейбит Саханов / Beibit Sakhanov
+
+Тексты доклада, схемы, страница «Сайт в скриншотах» и снимки экранов распространяются по лицензии
+Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/deed.ru
+The report texts, diagrams, the screenshot walkthrough and the screenshots are licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Демо-сайт «Шестая полоса» (папка demo/, кроме demo/assets/bootstrap/) и инструменты (папка tools/)
+распространяются по лицензии MIT, текст — в файле tools/LICENSE.
+The demo site (demo/, except demo/assets/bootstrap/) and the tools (tools/) are MIT-licensed, see tools/LICENSE.
+
+Bootstrap © The Bootstrap Authors, MIT — demo/assets/bootstrap/LICENSE. Chart.js © Chart.js Contributors, MIT.
+tools/lang/milchin.py и tools/lang/apply.py — из семьи редакторских скилов beaverbeard (MIT), github.com/beaverbeard.
+Bootstrap® — торговая марка The Bootstrap Authors; исследование с проектом Bootstrap не связано.

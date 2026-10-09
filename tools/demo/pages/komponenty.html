@@ -1,0 +1,342 @@
+Компоненты
+Витрина компонентов Bootstrap 6: кнопки как композиция формы и темы, значки и чипы, оповещения, диалоги и ящики на нативном dialog, меню, вкладки, степпер, карусель на scroll-snap, аватары, таблицы.
+<main id="main" class="container sp-section">
+  <header class="mb-9">
+    <p class="sp-kicker mb-2">витрина</p>
+    <h1 class="fs-4xl fw-semibold mb-3">Компоненты шестой версии</h1>
+    <p class="fg-2 text-pretty mb-0" style="max-width: 72ch">Каждый блок ниже — живой: диалоги открываются, меню раскрываются, карусель листается колёсиком. Цвет любого компонента задаёт класс темы <code>theme-*</code>, а форму — класс самого компонента.</p>
+  </header>
+  <div class="row g-9">
+    <nav class="lg:col-3 d-none lg:d-block" aria-label="Разделы витрины">
+      <ul class="nav nav-pills flex-column lg:sticky-top gap-1" style="top: 5rem">
+        <li class="nav-item"><a class="nav-link" href="#c-buttons">Кнопки</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-badges">Значки и чипы</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-alerts">Оповещения и ход</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-dialogs">Диалоги и ящики</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-menus">Меню</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-nav">Навигация и шаги</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-carousel">Карусель</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-avatars">Аватары и карточки</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-tables">Списки и таблицы</a></li>
+      </ul>
+    </nav>
+    <div class="lg:col-9 vstack gap-12">
+
+      <section id="c-buttons" aria-labelledby="h-buttons">
+        <h2 id="h-buttons" class="fs-2xl fw-semibold mb-2">Кнопки: форма × тема</h2>
+        <p class="fg-2 mb-5">Пять форм — <code>btn-solid</code>, <code>btn-outline</code>, <code>btn-subtle</code>, <code>btn-text</code>, <code>btn-styled</code> — и восемь тем ядра. В пятой версии на это уходило шестнадцать классов, здесь — таблица умножения.</p>
+        <div class="vstack gap-4">
+          <div class="d-flex flex-wrap gap-2 align-items-center"><code class="fs-xs fg-3" style="inline-size: 6rem">solid</code><button class="btn-solid theme-primary" type="button">Primary</button><button class="btn-solid theme-accent" type="button">Accent</button><button class="btn-solid theme-success" type="button">Success</button><button class="btn-solid theme-danger" type="button">Danger</button><button class="btn-solid theme-warning" type="button">Warning</button><button class="btn-solid theme-info" type="button">Info</button><button class="btn-solid theme-inverse" type="button">Inverse</button><button class="btn-solid theme-secondary" type="button">Secondary</button></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><code class="fs-xs fg-3" style="inline-size: 6rem">outline</code><button class="btn-outline theme-primary" type="button">Primary</button><button class="btn-outline theme-accent" type="button">Accent</button><button class="btn-outline theme-success" type="button">Success</button><button class="btn-outline theme-danger" type="button">Danger</button><button class="btn-outline theme-warning" type="button">Warning</button><button class="btn-outline theme-info" type="button">Info</button><button class="btn-outline theme-inverse" type="button">Inverse</button><button class="btn-outline theme-secondary" type="button">Secondary</button></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><code class="fs-xs fg-3" style="inline-size: 6rem">subtle</code><button class="btn-subtle theme-primary" type="button">Primary</button><button class="btn-subtle theme-accent" type="button">Accent</button><button class="btn-subtle theme-success" type="button">Success</button><button class="btn-subtle theme-danger" type="button">Danger</button><button class="btn-subtle theme-warning" type="button">Warning</button><button class="btn-subtle theme-info" type="button">Info</button><button class="btn-subtle theme-inverse" type="button">Inverse</button><button class="btn-subtle theme-secondary" type="button">Secondary</button></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><code class="fs-xs fg-3" style="inline-size: 6rem">text</code><button class="btn-text theme-primary" type="button">Primary</button><button class="btn-text theme-accent" type="button">Accent</button><button class="btn-text theme-success" type="button">Success</button><button class="btn-text theme-danger" type="button">Danger</button><button class="btn-text theme-warning" type="button">Warning</button><button class="btn-text theme-info" type="button">Info</button><button class="btn-text theme-inverse" type="button">Inverse</button><button class="btn-text theme-secondary" type="button">Secondary</button></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><code class="fs-xs fg-3" style="inline-size: 6rem">styled</code><button class="btn-styled theme-primary" type="button">Primary</button><button class="btn-styled theme-accent" type="button">Accent</button><button class="btn-styled theme-success" type="button">Success</button><button class="btn-styled theme-danger" type="button">Danger</button><button class="btn-styled theme-inverse" type="button">Inverse</button><button class="btn-styled theme-secondary" type="button">Secondary</button></div>
+        </div>
+        <hr class="my-7">
+        <div class="d-flex flex-wrap gap-3 align-items-center mb-5">
+          <button class="btn-solid theme-primary btn-xs" type="button">xs</button>
+          <button class="btn-solid theme-primary btn-sm" type="button">sm</button>
+          <button class="btn-solid theme-primary" type="button">обычная</button>
+          <button class="btn-solid theme-primary btn-lg" type="button">lg</button>
+          <button class="btn-icon btn-solid theme-primary" type="button" aria-label="Добавить"><svg class="sp-icon" width="16" height="16"><use href="#i-plus"/></svg></button>
+          <button class="btn-icon btn-outline theme-secondary" type="button" aria-label="Ещё"><svg class="sp-icon" width="16" height="16"><use href="#i-dots"/></svg></button>
+          <button class="btn-solid theme-primary hover-lift" type="button">С подъёмом</button>
+          <button class="btn-solid theme-primary" type="button" disabled>Отключена</button>
+          <button class="btn-link" type="button">Ссылка</button>
+        </div>
+        <div class="d-flex flex-wrap gap-5 align-items-center">
+          <div class="btn-group" role="group" aria-label="Формат">
+            <label class="btn-check btn-outline theme-primary"><input type="radio" name="fmt" checked>Текст</label>
+            <label class="btn-check btn-outline theme-primary"><input type="radio" name="fmt">Видео</label>
+            <label class="btn-check btn-outline theme-primary"><input type="radio" name="fmt">Подкаст</label>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn-solid theme-secondary">Экспорт</button>
+            <button type="button" class="btn-solid theme-secondary menu-toggle-split" data-bs-toggle="menu" aria-expanded="false" aria-label="Варианты экспорта"><svg class="sp-icon" width="14" height="14"><use href="#i-chevron-down"/></svg></button>
+            <div class="menu">
+              <a class="menu-item" href="#">В PDF</a>
+              <a class="menu-item" href="#">В Word</a>
+              <hr class="menu-divider">
+              <a class="menu-item" href="#">Печать</a>
+            </div>
+          </div>
+          <label class="btn-check btn-solid theme-success"><input type="checkbox">Переключатель-кнопка</label>
+        </div>
+      </section>
+
+      <section id="c-badges" aria-labelledby="h-badges">
+        <h2 id="h-badges" class="fs-2xl fw-semibold mb-2">Значки и чипы</h2>
+        <p class="fg-2 mb-5">Значок — три формы: сплошной, мягкий <code>badge-subtle</code> и контурный <code>badge-outline</code>. Чип — новый компонент для меток и выбора; с крестиком он становится удаляемым.</p>
+        <div class="vstack gap-4">
+          <div class="d-flex flex-wrap gap-2 align-items-center"><span class="badge theme-primary">primary</span><span class="badge theme-accent">accent</span><span class="badge theme-success">success</span><span class="badge theme-danger">danger</span><span class="badge theme-warning">warning</span><span class="badge theme-info">info</span><span class="badge theme-inverse">inverse</span><span class="badge theme-secondary">secondary</span></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><span class="badge badge-subtle theme-primary">primary</span><span class="badge badge-subtle theme-accent">accent</span><span class="badge badge-subtle theme-success">success</span><span class="badge badge-subtle theme-danger">danger</span><span class="badge badge-subtle theme-warning">warning</span><span class="badge badge-subtle theme-info">info</span><span class="badge badge-subtle theme-inverse">inverse</span><span class="badge badge-subtle theme-secondary">secondary</span></div>
+          <div class="d-flex flex-wrap gap-2 align-items-center"><span class="badge badge-outline theme-primary">primary</span><span class="badge badge-outline theme-accent">accent</span><span class="badge badge-outline theme-success">success</span><span class="badge badge-outline theme-danger">danger</span><span class="badge badge-outline theme-warning">warning</span><span class="badge badge-outline theme-info">info</span><span class="badge badge-outline theme-inverse">inverse</span><span class="badge badge-outline theme-secondary">secondary</span></div>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <h3 class="fs-xl mb-0">Заголовок <span class="badge theme-primary">новое</span></h3>
+            <button type="button" class="btn-solid theme-secondary position-relative">Входящие<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill border border-bg theme-danger">99+<span class="visually-hidden">непрочитанных</span></span></button>
+          </div>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <span class="chip">Простой</span>
+            <span class="chip"><img class="chip-img" width="16" height="16" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%235b5bd6'/><text x='16' y='21' font-family='sans-serif' font-size='13' font-weight='600' fill='white' text-anchor='middle'>ДК</text></svg>">С аватаром</span>
+            <span class="chip theme-primary">Тема</span>
+            <span class="chip theme-primary active">Выбран</span>
+            <span class="chip theme-success active"><svg class="sp-icon chip-icon" width="14" height="14"><use href="#i-check"/></svg>Готово</span>
+            <span class="chip">Удаляемый<button type="button" class="chip-dismiss" aria-label="Убрать"><svg class="sp-icon" width="14" height="14"><use href="#i-x"/></svg></button></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="c-alerts" aria-labelledby="h-alerts">
+        <h2 id="h-alerts" class="fs-2xl fw-semibold mb-2">Оповещения, тосты, ход выполнения</h2>
+        <p class="fg-2 mb-5">Крестик кладётся прямо в оповещение — класс <code>alert-dismissible</code> исчез, раскладка flex ставит кнопку на место сама. Оповещение гаснет плавно без класса <code>fade</code>.</p>
+        <div class="vstack gap-3 mb-5">
+          <div class="alert theme-primary" role="alert"><p class="mb-0">Заседание редколлегии перенесено на 15:00 — <a href="#" class="alert-link">подробности в календаре</a>.</p><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button></div>
+          <div class="alert theme-success" role="alert"><p class="mb-0">Номер подписан в печать. Спасибо всем, кто успел к сроку.</p><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button></div>
+          <div class="alert theme-warning" role="alert"><p class="mb-0">Корректура ещё не прочитала три материала из рубрики «Город».</p></div>
+          <div class="alert theme-danger d-flex align-items-start gap-3" role="alert"><svg class="sp-icon flex-none mt-1" width="18" height="18"><use href="#i-bell"/></svg><div><h3 class="alert-heading fs-md fw-semibold mb-1">Сервер изображений недоступен</h3><p class="mb-0">Загрузка фотографий временно приостановлена; тексты сохраняются как обычно.</p></div></div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 align-items-center mb-7">
+          <button class="btn-solid theme-primary" type="button" data-sp-toast="Материал отправлен редактору отдела.">Показать тост</button>
+          <button class="btn-outline theme-success" type="button" data-sp-toast="Корректор принял текст." data-sp-theme="success">Тост с темой success</button>
+          <button class="btn-outline theme-danger" type="button" data-sp-toast="Не удалось сохранить черновик." data-sp-theme="danger">Тост об ошибке</button>
+        </div>
+        <div class="vstack gap-4">
+          <div>
+            <div class="d-flex justify-content-between fs-sm mb-1"><span>Вычитано материалов</span><span class="fg-3">24 из 37</span></div>
+            <div class="progress" role="progressbar" aria-label="Вычитано" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 65%"></div></div>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between fs-sm mb-1"><span>Полоса по рубрикам</span><span class="fg-3">стопка</span></div>
+            <div class="progress-stacked">
+              <div class="progress theme-primary" role="progressbar" aria-label="Технологии" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%"><div class="progress-bar">35 %</div></div>
+              <div class="progress theme-success" role="progressbar" aria-label="Экономика" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"><div class="progress-bar">25 %</div></div>
+              <div class="progress theme-warning" role="progressbar" aria-label="Культура" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><div class="progress-bar">20 %</div></div>
+            </div>
+          </div>
+          <div class="d-flex gap-4 align-items-center">
+            <div class="spinner-border theme-primary" role="status"><span class="visually-hidden">Загрузка…</span></div>
+            <div class="spinner-grow theme-accent" role="status"><span class="visually-hidden">Загрузка…</span></div>
+            <button class="btn-solid theme-primary" type="button" disabled><span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Сохраняем…</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="c-dialogs" aria-labelledby="h-dialogs">
+        <h2 id="h-dialogs" class="fs-2xl fw-semibold mb-2">Диалоги и ящики на нативном dialog</h2>
+        <p class="fg-2 mb-5">Модальное окно — элемент <code>&lt;dialog&gt;</code>: подложку рисует <code>::backdrop</code>, фокус запирает браузер, прокрутку страницы держит <code>scrollbar-gutter: stable</code>, поэтому макет не прыгает. Ящик — тот же элемент с другой геометрией.</p>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgDefault">Обычный диалог</button>
+          <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgSlide">Выезжает снизу</button>
+          <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgStatic" data-bs-backdrop="static">Статичная подложка</button>
+          <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgDark">Тёмный диалог</button>
+          <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgScroll">Прокручиваемый</button>
+        </div>
+        <div class="d-flex flex-wrap gap-3">
+          <button class="btn-solid theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwStart">Ящик слева</button>
+          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwBottom">Ящик снизу</button>
+          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwSheet">Лист без отступов</button>
+        </div>
+      </section>
+
+      <section id="c-menus" aria-labelledby="h-menus">
+        <h2 id="h-menus" class="fs-2xl fw-semibold mb-2">Меню вместо dropdown</h2>
+        <p class="fg-2 mb-5">Обёртка не нужна: кнопка и <code>.menu</code> — соседи. Позиционирует Floating UI, подменю раскрывается по наведению или клику.</p>
+        <div class="d-flex flex-wrap gap-3 align-items-start">
+          <div class="position-relative">
+            <button class="btn-solid theme-secondary" type="button" data-bs-toggle="menu" aria-expanded="false">Рубрики <svg class="sp-icon ms-1" width="14" height="14"><use href="#i-chevron-down"/></svg></button>
+            <div class="menu">
+              <h6 class="menu-header">Основные</h6>
+              <a class="menu-item active" href="#">Технологии</a>
+              <a class="menu-item" href="#">Экономика</a>
+              <a class="menu-item" href="#">Город</a>
+              <hr class="menu-divider">
+              <div class="submenu">
+                <button class="menu-item" type="button">Спецпроекты <svg class="sp-icon ms-auto" width="14" height="14"><use href="#i-chevron-right"/></svg></button>
+                <div class="menu">
+                  <a class="menu-item" href="#">Лонгриды</a>
+                  <a class="menu-item" href="#">Карты</a>
+                  <a class="menu-item" href="#">Подкасты</a>
+                </div>
+              </div>
+              <a class="menu-item disabled" aria-disabled="true">Архив (скоро)</a>
+            </div>
+          </div>
+          <div class="position-relative">
+            <button class="btn-outline theme-secondary" type="button" data-bs-toggle="menu" data-bs-placement="top" aria-expanded="false">Открыть вверх</button>
+            <div class="menu"><a class="menu-item" href="#">Первый</a><a class="menu-item" href="#">Второй</a></div>
+          </div>
+          <div class="position-relative">
+            <button class="btn-outline theme-secondary" type="button" data-bs-toggle="menu" data-bs-placement="right-start" aria-expanded="false">Открыть вправо</button>
+            <div class="menu"><a class="menu-item" href="#">Первый</a><a class="menu-item" href="#">Второй</a></div>
+          </div>
+          <button class="btn-outline theme-secondary" type="button" data-bs-toggle="popover" data-bs-title="Поповер" data-bs-content="Тоже на Floating UI. Закрывается по клику вне, остаётся при наведении на само облако.">Поповер</button>
+          <button class="btn-outline theme-secondary" type="button" data-bs-toggle="tooltip" data-bs-title="Подсказка держится, пока курсор над ней">Подсказка</button>
+        </div>
+      </section>
+
+      <section id="c-nav" aria-labelledby="h-nav">
+        <h2 id="h-nav" class="fs-2xl fw-semibold mb-2">Навигация и шаги</h2>
+        <p class="fg-2 mb-5">Вкладки — плагин Tab, панель появляется из <code>@starting-style</code>. Степпер — новый компонент только на CSS: шкала пути материала по редакции.</p>
+        <ul class="nav nav-tabs mb-5" role="tablist">
+          <li class="nav-item" role="presentation"><button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#pane1" type="button" role="tab" aria-controls="pane1" aria-selected="true">Сегодня</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#pane2" type="button" role="tab" aria-controls="pane2" aria-selected="false">Неделя</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#pane3" type="button" role="tab" aria-controls="pane3" aria-selected="false">Месяц</button></li>
+        </ul>
+        <div class="tab-content mb-7">
+          <div class="tab-pane show active" id="pane1" role="tabpanel" aria-labelledby="tab1" tabindex="0"><p class="mb-0">За сегодня опубликовано 37 материалов, в работе 24, три ждут главреда.</p></div>
+          <div class="tab-pane" id="pane2" role="tabpanel" aria-labelledby="tab2" tabindex="0"><p class="mb-0">За неделю — 212 материалов; самая активная рубрика — «Город».</p></div>
+          <div class="tab-pane" id="pane3" role="tabpanel" aria-labelledby="tab3" tabindex="0"><p class="mb-0">За месяц — 870 материалов и 14 лонгридов.</p></div>
+        </div>
+        <div class="row g-7 mb-7">
+          <div class="md:col-6"><p class="sp-kicker mb-3">подчёркнутые</p><nav class="nav nav-underline"><a class="nav-link active" aria-current="page" href="#">Лента</a><a class="nav-link" href="#">Избранное</a><a class="nav-link" href="#">Архив</a><a class="nav-link disabled" aria-disabled="true">Черновики</a></nav></div>
+          <div class="md:col-6"><p class="sp-kicker mb-3">таблетки</p><nav class="nav nav-pills"><a class="nav-link active" aria-current="page" href="#">Все</a><a class="nav-link" href="#">Тексты</a><a class="nav-link" href="#">Фото</a><a class="nav-link" href="#">Видео</a></nav></div>
+        </div>
+        <p class="sp-kicker mb-3">путь материала по редакции</p>
+        <div class="stepper-overflow mb-5">
+          <ol class="stepper stepper-horizontal w-100">
+            <li class="stepper-item theme-success active"><div><div>Репортёр</div><div class="badge badge-subtle">сдано</div></div></li>
+            <li class="stepper-item theme-success active"><div><div>Редактор отдела</div><div class="badge badge-subtle">принято</div></div></li>
+            <li class="stepper-item theme-primary active"><div><div>Корректор</div><div class="badge badge-subtle">в работе</div></div></li>
+            <li class="stepper-item theme-secondary"><div><div>Главред</div><div class="badge badge-subtle">ожидает</div></div></li>
+            <li class="stepper-item theme-secondary"><div><div>Публикация</div><div class="badge badge-subtle">—</div></div></li>
+          </ol>
+        </div>
+        <ol class="stepper">
+          <li class="stepper-item active"><div><div class="fw-semibold">Верстаем</div><small class="fg-3">вертикальный степпер по умолчанию</small></div></li>
+          <li class="stepper-item active"><div><div class="fw-semibold">Снимаем</div><small class="fg-3">экраны в Chromium</small></div></li>
+          <li class="stepper-item"><div><div class="fw-semibold">Публикуем</div><small class="fg-3">репозиторий и релиз</small></div></li>
+        </ol>
+      </section>
+
+      <section id="c-carousel" aria-labelledby="h-carousel">
+        <h2 id="h-carousel" class="fs-2xl fw-semibold mb-2">Карусель на scroll-snap</h2>
+        <p class="fg-2 mb-5">Лента — обычный контейнер с прокруткой и привязкой: свайп, инерция и клавиатура достаются от браузера. Три слайда в ряд задают две переменные, без JavaScript.</p>
+        <div id="carouselThree" class="carousel slide mb-7" data-bs-ends="stop" style="--bs-carousel-items: 3; --bs-carousel-items-gap: 1rem">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="fs-md fw-semibold mb-0">Фоторепортаж: три кадра в ряд</h3>
+            <div class="d-flex gap-1">
+              <button class="btn-icon btn-outline theme-secondary btn-sm" type="button" data-bs-target="#carouselThree" data-bs-slide="prev"><span class="carousel-icon-prev" aria-hidden="true"></span><span class="visually-hidden">Назад</span></button>
+              <button class="btn-icon btn-outline theme-secondary btn-sm" type="button" data-bs-target="#carouselThree" data-bs-slide="next"><span class="carousel-icon-next" aria-hidden="true"></span><span class="visually-hidden">Вперёд</span></button>
+            </div>
+          </div>
+          <div class="carousel-inner rounded-5">
+            <div class="carousel-item active"><div class="sp-img sp-img-4x3" data-label="кадр 1" role="img" aria-label="Кадр 1"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-4x3 sp-img-green" data-label="кадр 2" role="img" aria-label="Кадр 2"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-4x3 sp-img-warm" data-label="кадр 3" role="img" aria-label="Кадр 3"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-4x3 sp-img-violet" data-label="кадр 4" role="img" aria-label="Кадр 4"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-4x3 sp-img-ink" data-label="кадр 5" role="img" aria-label="Кадр 5"></div></div>
+          </div>
+        </div>
+        <div id="carouselOverlay" class="carousel slide carousel-overlay" data-bs-theme="dark">
+          <div class="carousel-inner rounded-5">
+            <div class="carousel-item active"><div class="sp-img sp-img-ink" data-label="слайд 1" role="img" aria-label="Слайд 1"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-ink" data-label="слайд 2" role="img" aria-label="Слайд 2"></div></div>
+            <div class="carousel-item"><div class="sp-img sp-img-ink" data-label="слайд 3" role="img" aria-label="Слайд 3"></div></div>
+          </div>
+          <div class="carousel-overlay-controls">
+            <button class="btn-icon" type="button" data-bs-target="#carouselOverlay" data-bs-slide="prev"><span class="carousel-icon-prev" aria-hidden="true"></span><span class="visually-hidden">Назад</span></button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+              <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+              <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+            </div>
+            <button class="btn-icon" type="button" data-bs-target="#carouselOverlay" data-bs-slide="next"><span class="carousel-icon-next" aria-hidden="true"></span><span class="visually-hidden">Вперёд</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="c-avatars" aria-labelledby="h-avatars">
+        <h2 id="h-avatars" class="fs-2xl fw-semibold mb-2">Аватары и карточки</h2>
+        <p class="fg-2 mb-5">Аватар — новый компонент с размерами, индикатором статуса и стопкой. Карточка получила варианты <code>card-subtle</code>, <code>card-translucent</code> и горизонтальную форму <code>card-row</code>.</p>
+        <div class="d-flex flex-wrap align-items-center gap-4 mb-7">
+          <span class="avatar avatar-xs theme-primary">АС</span>
+          <span class="avatar avatar-sm theme-accent">ДК</span>
+          <span class="avatar theme-success">МЖ</span>
+          <span class="avatar avatar-lg avatar-subtle theme-danger">ЕР</span>
+          <span class="avatar avatar-xl avatar-subtle theme-info">БС</span>
+          <span class="avatar avatar-status theme-primary">АС<span class="status-online" aria-label="в сети"></span></span>
+          <span class="avatar avatar-status theme-secondary">ДК<span class="status-busy" aria-label="занят"></span></span>
+          <span class="avatar avatar-status theme-secondary">МЖ<span class="status-away" aria-label="отошёл"></span></span>
+          <div class="avatar-stack"><span class="avatar avatar-sm theme-primary">АС</span><span class="avatar avatar-sm theme-accent">ДК</span><span class="avatar avatar-sm theme-success">МЖ</span><span class="avatar avatar-sm theme-danger">ЕР</span><span class="avatar avatar-sm theme-secondary">+3</span></div>
+        </div>
+        <div class="row g-5">
+          <div class="md:col-4"><div class="card card-subtle theme-accent h-100"><div class="card-body"><h3 class="fs-md fw-semibold">card-subtle</h3><p class="fs-sm mb-0">Мягкий фон и рамка из ступеней темы; текст — из fg-emphasis.</p></div></div></div>
+          <div class="md:col-4"><div class="sp-img sp-img-violet rounded-5 p-5 d-flex align-items-end h-100" data-label="" style="aspect-ratio: auto"><div class="card card-translucent w-100"><div class="card-body"><h3 class="fs-md fw-semibold">card-translucent</h3><p class="fs-sm mb-0">Матовое стекло поверх изображения.</p></div></div></div></div>
+          <div class="md:col-4"><div class="card card-row h-100"><div class="sp-img sp-img-1x1 sp-img-green flex-none w-8" data-label=""></div><div class="card-body"><h3 class="fs-md fw-semibold">card-row</h3><p class="fs-sm mb-0">Горизонтальная карточка одним классом.</p></div></div></div>
+        </div>
+      </section>
+
+      <section id="c-tables" aria-labelledby="h-tables">
+        <h2 id="h-tables" class="fs-2xl fw-semibold mb-2">Списки и таблицы</h2>
+        <p class="fg-2 mb-5">Таблица с темой строк и обёрткой <code>md:table-responsive</code>: ниже md она прокручивается по горизонтали.</p>
+        <div class="row g-7">
+          <div class="md:col-5">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">Технологии<span class="badge theme-primary rounded-pill">14</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center active" aria-current="true">Экономика<span class="badge theme-contrast rounded-pill">9</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">Город<span class="badge theme-primary rounded-pill">21</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center disabled" aria-disabled="true">Архив<span class="badge badge-subtle theme-secondary rounded-pill">—</span></li>
+            </ul>
+          </div>
+          <div class="md:col-7">
+            <div class="md:table-responsive">
+              <table class="table table-hover table-sm">
+                <thead><tr><th scope="col">материал</th><th scope="col">автор</th><th scope="col">стадия</th><th scope="col" class="text-end">знаков</th></tr></thead>
+                <tbody>
+                  <tr><td>Цветовая модель</td><td>А. Сапарова</td><td><span class="badge badge-subtle theme-success">вычитан</span></td><td class="text-end">12 400</td></tr>
+                  <tr class="theme-warning"><td>Бюджет города</td><td>Д. Касымова</td><td><span class="badge badge-subtle theme-warning">у корректора</span></td><td class="text-end">8 900</td></tr>
+                  <tr><td>Набережная</td><td>М. Жаксыбеков</td><td><span class="badge badge-subtle theme-primary">у редактора</span></td><td class="text-end">5 100</td></tr>
+                  <tr class="theme-danger"><td>Филармония</td><td>Е. Руденко</td><td><span class="badge badge-subtle theme-danger">возвращён</span></td><td class="text-end">6 700</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <dialog class="dialog" id="dlgDefault" aria-labelledby="dlgDefaultTitle">
+    <div class="dialog-header"><h2 class="dialog-title fs-lg" id="dlgDefaultTitle">Отправить главреду?</h2><button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button></div>
+    <div class="dialog-body"><p class="mb-0">Материал «Цветовая модель» уйдёт на последнюю ступень. Вернуть его сможет только главный редактор.</p></div>
+    <div class="dialog-footer"><button type="button" class="btn-text theme-secondary" data-bs-dismiss="dialog">Отмена</button><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog" data-sp-toast="Материал отправлен главреду.">Отправить</button></div>
+  </dialog>
+  <dialog class="dialog dialog-slide-up" id="dlgSlide" aria-labelledby="dlgSlideTitle">
+    <div class="dialog-header"><h2 class="dialog-title fs-lg" id="dlgSlideTitle">Выезжает снизу</h2><button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button></div>
+    <div class="dialog-body"><p class="mb-0">Класс <code>dialog-slide-up</code>: та же разметка, другая анимация. Удобно на телефоне.</p></div>
+  </dialog>
+  <dialog class="dialog" id="dlgStatic" aria-labelledby="dlgStaticTitle">
+    <div class="dialog-header"><h2 class="dialog-title fs-lg" id="dlgStaticTitle">Статичная подложка</h2><button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button></div>
+    <div class="dialog-body"><p class="mb-0">Клик по подложке не закрывает окно, а слегка качает его — так пользователь понимает, что нужно нажать кнопку.</p></div>
+    <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Понятно</button></div>
+  </dialog>
+  <dialog class="dialog" id="dlgDark" data-bs-theme="dark" aria-labelledby="dlgDarkTitle">
+    <div class="dialog-header"><h2 class="dialog-title fs-lg" id="dlgDarkTitle">Тёмный диалог</h2><button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button></div>
+    <div class="dialog-body"><p>Атрибут <code>data-bs-theme="dark"</code> на одном элементе: внутри все токены пересчитаны через <code>light-dark()</code>.</p><div class="d-flex gap-2"><button class="btn-solid theme-primary" type="button">Кнопка</button><button class="btn-outline theme-secondary" type="button">Ещё одна</button></div></div>
+  </dialog>
+  <dialog class="dialog dialog-scrollable" id="dlgScroll" aria-labelledby="dlgScrollTitle">
+    <div class="dialog-header"><h2 class="dialog-title fs-lg" id="dlgScrollTitle">Регламент редакции</h2><button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button></div>
+    <div class="dialog-body">
+      <p>Первое. Материал проходит четыре ступени: репортёр, редактор отдела, корректор, главный редактор. Пропуск ступени возможен только для срочных новостей короче тысячи знаков.</p>
+      <p>Второе. Каждая правка хранится в версии материала; откат — одним действием.</p>
+      <p>Третье. Заголовок не длиннее девяноста знаков, подзаголовок — ста шестидесяти.</p>
+      <p>Четвёртое. Фотография без подписи и автора не публикуется.</p>
+      <p>Пятое. Цифры в тексте пишутся по правилам издания: десятичная запятая, неразрывный пробел между разрядами.</p>
+      <p>Шестое. Комментарии читаются в рабочие часы и модерируются до выхода в эфир.</p>
+      <p>Седьмое. Опровержение выходит в той же рубрике и с тем же весом, что и опровергаемый материал.</p>
+    </div>
+    <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Прочитал</button></div>
+  </dialog>
+  <dialog class="drawer drawer-start" tabindex="-1" id="drwStart" aria-labelledby="drwStartTitle">
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwStartTitle">Ящик слева</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-body vstack gap-3"><p class="mb-0">На сенсорном экране его можно смахнуть обратно — жест встроен в плагин.</p><ul class="nav nav-pills flex-column"><li class="nav-item"><a class="nav-link active" href="#">Лента</a></li><li class="nav-item"><a class="nav-link" href="#">Рубрики</a></li><li class="nav-item"><a class="nav-link" href="#">Авторы</a></li></ul></div>
+  </dialog>
+  <dialog class="drawer drawer-bottom" tabindex="-1" id="drwBottom" aria-labelledby="drwBottomTitle">
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwBottomTitle">Ящик снизу</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-body"><p class="mb-0">Подходит для действий с материалом на телефоне: отправить, отложить, удалить.</p></div>
+  </dialog>
+  <dialog class="drawer drawer-sheet drawer-end" tabindex="-1" id="drwSheet" aria-labelledby="drwSheetTitle">
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwSheetTitle">Лист</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-body"><p class="mb-0">Вариант <code>drawer-sheet</code>: без отступа от края, без скругления и тени.</p></div>
+  </dialog>
+</main>

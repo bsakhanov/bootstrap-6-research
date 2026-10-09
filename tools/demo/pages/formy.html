@@ -1,0 +1,194 @@
+Формы
+Регистрация читателя как витрина форм Bootstrap 6: form-field, form-adorn, плавающие подписи, комбобокс, поле с чипами, календарь, код подтверждения, измеритель пароля, ползунок с подписью и делениями, проверка после первого касания.
+<main id="main" class="container sp-section">
+  <header class="mb-9">
+    <p class="sp-kicker mb-2">формы</p>
+    <h1 class="fs-4xl fw-semibold mb-3">Регистрация читателя</h1>
+    <p class="fg-2 text-pretty mb-0" style="max-width: 72ch">Одна форма собирает почти все новые элементы шестой версии. Проверка полей включается атрибутом <code>data-bs-validate</code> и срабатывает только после того, как человек тронул поле: красные рамки не вспыхивают при первом открытии страницы.</p>
+  </header>
+  <div class="row g-9">
+    <div class="lg:col-8">
+      <form class="vstack gap-9" data-sp-demo="Регистрация принята. Проверьте почту — код уже в пути." data-bs-validate novalidate>
+        <fieldset class="vstack gap-5">
+          <legend class="fs-xl fw-semibold mb-0">Кто вы</legend>
+          <div class="grid gap-5">
+            <div class="form-field g-col-12 md:g-col-6">
+              <label for="fName" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="fName" placeholder="Как к вам обращаться" required>
+              <div class="invalid-feedback">Имя нужно, чтобы подписывать письма.</div>
+            </div>
+            <div class="form-field g-col-12 md:g-col-6">
+              <label for="fEmail" class="form-label">Электронная почта</label>
+              <label class="form-control form-adorn">
+                <span class="form-adorn-icon" aria-hidden="true"><svg class="sp-icon" width="16" height="16"><use href="#i-mail"/></svg></span>
+                <input type="email" class="form-ghost" id="fEmail" placeholder="imya@primer.kz" required>
+              </label>
+              <div class="form-text">Обёртка-иконка — элемент <code>label</code>, клик по ней ставит фокус в поле.</div>
+              <div class="invalid-feedback">Проверьте адрес.</div>
+            </div>
+          </div>
+          <div class="grid gap-5">
+            <div class="form-floating g-col-12 md:g-col-6 align-self-start">
+              <label for="fCity">Город</label>
+              <input type="text" class="form-control" id="fCity" placeholder="Астана">
+            </div>
+            <div class="form-field g-col-12 md:g-col-6">
+              <label for="fBirth" class="form-label">Дата рождения</label>
+              <label class="form-control form-adorn">
+                <span class="form-adorn-icon" aria-hidden="true"><svg class="sp-icon" width="16" height="16"><use href="#i-calendar"/></svg></span>
+                <input type="text" class="form-ghost" id="fBirth" data-bs-toggle="datepicker" autocomplete="off" placeholder="Выберите дату…">
+              </label>
+              <div class="form-text">Календарь — плагин Datepicker на Vanilla Calendar Pro.</div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="fRole">Роль</label>
+            <div class="position-relative">
+              <button class="form-control combobox-toggle" type="button" id="fRole" data-bs-toggle="combobox" data-bs-name="role" data-bs-placeholder="Выберите роль…" data-bs-search="true">
+                <span class="combobox-value">Выберите роль…</span>
+                <svg class="combobox-caret" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z" fill="currentcolor"/></svg>
+              </button>
+              <div class="menu">
+                <div class="combobox-search">
+                  <input type="text" class="form-control combobox-search-input" placeholder="Поиск…" autocomplete="off" aria-label="Поиск по ролям">
+                </div>
+                <button class="menu-item" type="button" data-bs-value="reader">Читатель</button>
+                <button class="menu-item" type="button" data-bs-value="author">Автор</button>
+                <button class="menu-item" type="button" data-bs-value="editor">Редактор отдела</button>
+                <button class="menu-item" type="button" data-bs-value="proof">Корректор</button>
+                <button class="menu-item" type="button" data-bs-value="chief">Главный редактор</button>
+              </div>
+            </div>
+            <div class="form-text">Комбобокс с поиском построен на компоненте Menu; значение уходит в скрытое поле <code>role</code>.</div>
+          </div>
+        </fieldset>
+
+        <fieldset class="vstack gap-5">
+          <legend class="fs-xl fw-semibold mb-0">Что читать</legend>
+          <div class="form-field">
+            <label class="form-label" for="fTopics">Интересы</label>
+            <div class="chip-input theme-primary" data-bs-chips>
+              <label class="chip-input-label" for="fTopics">Темы:</label>
+              <span class="chip">технологии</span>
+              <span class="chip">город</span>
+              <input type="text" class="form-ghost" id="fTopics" placeholder="Добавьте тему и нажмите Enter…">
+            </div>
+            <div class="form-text">Поле с чипами: Enter или запятая добавляет метку, Backspace убирает последнюю.</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Формат рассылки</label>
+            <div class="d-flex flex-wrap gap-2">
+              <label class="btn-check btn-outline theme-primary"><input type="radio" name="format" value="morning" checked>Утренний дайджест</label>
+              <label class="btn-check btn-outline theme-primary"><input type="radio" name="format" value="weekly">Еженедельник</label>
+              <label class="btn-check btn-outline theme-primary"><input type="radio" name="format" value="breaking">Только срочное</label>
+            </div>
+            <small class="form-text">Кнопки-переключатели: класс <code>btn-check</code> стоит на подписи, поле вложено внутрь, связь через <code>:has()</code>.</small>
+          </div>
+          <div class="grid gap-5">
+            <div class="form-group g-col-12 md:g-col-6">
+              <label class="form-label">Рубрики</label>
+              <div class="form-field"><input type="checkbox" class="check" id="cTech" checked><label for="cTech">Технологии</label></div>
+              <div class="form-field"><input type="checkbox" class="check" id="cEcon"><label for="cEcon">Экономика</label></div>
+              <div class="form-field"><input type="checkbox" class="check" id="cCity" checked><div class="form-field-content"><label for="cCity">Город</label><small class="form-text">Галочка появляется с лёгким «перелётом» — анимация в ядре.</small></div></div>
+            </div>
+            <div class="form-group g-col-12 md:g-col-6">
+              <label class="form-label">Уведомления</label>
+              <div class="form-field"><div class="switch"><input type="checkbox" id="sPush" role="switch" switch checked></div><label for="sPush">В браузере</label></div>
+              <div class="form-field"><div class="switch"><input type="checkbox" id="sMail" role="switch" switch></div><label for="sMail">На почту</label></div>
+              <div class="form-field"><div class="switch"><input type="checkbox" id="sSms" role="switch" switch disabled></div><label for="sSms">В сообщениях (скоро)</label></div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="fBudget" class="form-label">Сколько минут в день готовы читать</label>
+            <div class="form-range" data-bs-bubble>
+              <input type="range" class="form-range-input" id="fBudget" min="0" max="60" step="15" value="30" list="budgetTicks">
+            </div>
+            <datalist id="budgetTicks">
+              <option value="0" label="0"></option><option value="15" label="15"></option><option value="30" label="30"></option><option value="45" label="45"></option><option value="60" label="час"></option>
+            </datalist>
+            <div class="form-text">Ползунок — плагин Range: закрашенная дорожка, подпись значения и деления из <code>datalist</code>.</div>
+          </div>
+        </fieldset>
+
+        <fieldset class="vstack gap-5">
+          <legend class="fs-xl fw-semibold mb-0">Доступ</legend>
+          <div class="grid gap-5">
+            <div class="form-field g-col-12 md:g-col-6">
+              <label for="fPass" class="form-label">Пароль</label>
+              <label class="form-control form-adorn">
+                <span class="form-adorn-icon" aria-hidden="true"><svg class="sp-icon" width="16" height="16"><use href="#i-lock"/></svg></span>
+                <input type="password" class="form-ghost" id="fPass" placeholder="Не короче восьми знаков" minlength="8" required>
+              </label>
+              <div class="strength" data-bs-strength data-bs-input="#fPass" data-bs-messages='{"weak":"Слабый","fair":"Средний","good":"Хороший","strong":"Надёжный"}'>
+                <div class="strength-segment"></div><div class="strength-segment"></div><div class="strength-segment"></div><div class="strength-segment"></div>
+              </div>
+              <span class="strength-text fs-sm fg-3"></span>
+              <div class="invalid-feedback">Восемь знаков и больше.</div>
+            </div>
+            <div class="form-field g-col-12 md:g-col-6">
+              <label for="fOtp" class="form-label">Код из письма</label>
+              <div class="otp otp-connected" data-bs-otp data-bs-groups="[3,3]">
+                <input type="text" class="otp-input" id="fOtp" maxlength="6" aria-label="Код подтверждения" inputmode="numeric">
+              </div>
+              <div class="form-text">Одно поле ввода, нарисованное как шесть ячеек: вставка из буфера раскладывается по ячейкам сама.</div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="fAmount" class="form-label">Поддержать издание</label>
+            <div class="input-group" style="max-width: 20rem">
+              <span class="input-group-text">₸</span>
+              <input type="number" class="form-control" id="fAmount" value="1500" min="500" step="100" aria-describedby="fAmountHelp">
+              <span class="input-group-text">в месяц</span>
+            </div>
+            <div class="form-text" id="fAmountHelp">Группа полей без <code>flex-wrap</code>: подсказка живёт в родительском <code>form-field</code>.</div>
+          </div>
+          <div class="form-field">
+            <input type="checkbox" class="check" id="fAgree" required>
+            <div class="form-field-content">
+              <label for="fAgree">Согласен с правилами издания</label>
+              <small class="form-text">Без галочки форма не отправится, а ошибка покажется только после касания.</small>
+              <div class="invalid-feedback">Нужно согласие.</div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <button class="btn-solid theme-primary btn-lg" type="submit">Зарегистрироваться</button>
+          <button class="btn-text theme-secondary" type="reset">Очистить форму</button>
+        </div>
+      </form>
+    </div>
+    <aside class="lg:col-4">
+      <div class="lg:sticky-top vstack gap-5" style="top: 5rem">
+        <div class="card card-subtle theme-info">
+          <div class="card-body">
+            <p class="fw-semibold mb-2">Что здесь нового</p>
+            <ul class="fs-sm mb-0 ps-5">
+              <li><code>form-field</code> — сетка «подпись + поле + подсказка + ошибка»;</li>
+              <li><code>form-adorn</code> — поле с иконкой;</li>
+              <li>комбобокс с поиском, поле с чипами, календарь;</li>
+              <li>код подтверждения, измеритель пароля;</li>
+              <li>ползунок с подписью и делениями;</li>
+              <li>проверка через <code>:user-invalid</code>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="fw-semibold mb-2">Что исчезло</p>
+            <p class="fs-sm fg-2 mb-0"><code>form-select</code> слился с <code>form-control</code>; <code>form-check</code> разделился на <code>check</code>, <code>radio</code> и <code>switch</code>; классы <code>was-validated</code> и <code>needs-validation</code> заменил атрибут на форме.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="fw-semibold mb-3">Состояния с сервера</p>
+            <div class="vstack gap-4">
+              <div class="form-field"><label class="form-label" for="srvOk">Логин</label><input type="text" class="form-control is-valid" id="srvOk" value="shestaya"><div class="valid-feedback">Свободен.</div></div>
+              <div class="form-field"><label class="form-label" for="srvBad">Промокод</label><input type="text" class="form-control is-invalid" id="srvBad" value="ПОЛОСА-2025"><div class="invalid-feedback">Срок действия истёк.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>

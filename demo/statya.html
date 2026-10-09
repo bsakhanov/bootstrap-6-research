@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Статья — Шестая полоса</title>
+<meta name="description" content="Страница материала: хлебные крошки, класс prose для длинного текста, диалог «Поделиться» на нативном dialog, аккордеон на details, чипы меток.">
+<meta property="og:title" content="Статья — Шестая полоса">
+<meta property="og:description" content="Страница материала: хлебные крошки, класс prose для длинного текста, диалог «Поделиться» на нативном dialog, аккордеон на details, чипы меток.">
+<meta property="og:type" content="website">
+<!-- Шестая полоса · демонстрационный сайт исследования Bootstrap 6 · сборка 2026-10-09 06:04 UTC · редакция 1.0 -->
+<script>try{var t=localStorage.getItem('sp-theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script type="module" src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="assets/site.js"></script>
+</head>
+<body class="bg-body fg-body" data-sp-page="statya">
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none" aria-hidden="true">
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M21 21l-5-5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+<symbol id="i-half" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></symbol>
+<symbol id="i-chevron-right" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 5 5 5-5"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></symbol>
+<symbol id="i-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 8 4 4 8-8"/></symbol>
+<symbol id="i-x" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></symbol>
+<symbol id="i-plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></symbol>
+<symbol id="i-dots" viewBox="0 0 16 16" fill="currentColor"><circle cx="3" cy="8" r="1.6"/><circle cx="8" cy="8" r="1.6"/><circle cx="13" cy="8" r="1.6"/></symbol>
+<symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21a2 2 0 0 0 4 0"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17z"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5M3 17l9 5 9-5"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+<header class="sticky-top">
+<nav class="navbar md:navbar-expand bg-1 border-bottom border-subtle" aria-label="Главное меню">
+  <div class="container">
+    <a class="navbar-brand fw-semibold d-flex align-items-center" href="index.html"><span class="sp-mark" aria-hidden="true">6</span>Шестая полоса</a>
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navDrawerLabel">Меню</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button>
+      </div>
+      <div class="drawer-body">
+        <ul class="nav navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="rubrika.html">Рубрика</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="statya.html">Статья</a></li><li class="nav-item"><a class="nav-link" href="komponenty.html">Компоненты</a></li><li class="nav-item"><a class="nav-link" href="formy.html">Формы</a></li><li class="nav-item"><a class="nav-link" href="tokeny.html">Токены</a></li><li class="nav-item"><a class="nav-link" href="redakciya.html">Редакция</a></li></ul>
+        <div class="d-flex align-items-center gap-3 mt-5 md:mt-0">
+          <div class="position-relative">
+            <button class="btn-icon btn-subtle theme-secondary" type="button" data-bs-toggle="menu" aria-expanded="false" aria-label="Цветовая схема" id="themeToggle">
+              <svg class="sp-icon" width="18" height="18"><use href="#i-half"/></svg>
+            </button>
+            <div class="menu">
+              <button class="menu-item" type="button" data-sp-theme="light"><svg class="sp-icon me-2" width="16" height="16"><use href="#i-sun"/></svg>Светлая</button>
+              <button class="menu-item" type="button" data-sp-theme="dark"><svg class="sp-icon me-2" width="16" height="16"><use href="#i-moon"/></svg>Тёмная</button>
+              <button class="menu-item active" type="button" data-sp-theme="auto"><svg class="sp-icon me-2" width="16" height="16"><use href="#i-half"/></svg>Как в системе</button>
+            </div>
+          </div>
+          <a class="btn-solid theme-primary btn-sm" href="formy.html">Подписаться</a>
+        </div>
+      </div>
+    </dialog>
+  </div>
+</nav>
+</header>
+<main id="main" class="container sp-section">
+  <nav aria-label="Хлебные крошки" class="mb-7">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Главная</a></li>
+      <li class="breadcrumb-divider"></li>
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="rubrika.html">Технологии</a></li>
+      <li class="breadcrumb-divider"></li>
+      <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="#">Цветовая модель</a></li>
+    </ol>
+  </nav>
+  <div class="row g-9">
+    <article class="lg:col-8">
+      <header class="mb-7">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="badge theme-primary">технологии</span>
+          <span class="fs-sm fg-3">14 минут чтения</span>
+        </div>
+        <h1 class="fs-4xl fw-semibold text-balance lh-1 mb-5">Шестой выпуск Bootstrap переписал цветовую модель: что это меняет для сайтов, которые живут годами</h1>
+        <p class="fs-lg fg-2 text-pretty mb-5">Оттенки теперь задаются в oklch, двенадцать ступеней каждого цвета рассчитывает сам браузер, а компоненты красятся композицией классов. Разбираем на примерах, где это упростит работу редакции, а где придётся переучиваться.</p>
+        <div class="d-flex align-items-center flex-wrap gap-3 border-top border-bottom border-subtle py-4">
+          <span class="avatar theme-primary">АС</span>
+          <div class="fs-sm">
+            <div class="fw-medium">Айгерим Сапарова</div>
+            <div class="fg-3">обозреватель · сегодня, 08:40 · обновлено 11:15</div>
+          </div>
+          <div class="ms-auto d-flex gap-2">
+            <button class="btn-outline theme-secondary btn-sm" type="button" data-bs-toggle="dialog" data-bs-target="#shareDialog"><svg class="sp-icon me-1" width="14" height="14"><use href="#i-share"/></svg>Поделиться</button>
+            <button class="btn-icon btn-subtle theme-secondary btn-sm" type="button" data-bs-toggle="tooltip" data-bs-title="Сохранить в закладки" aria-label="Сохранить в закладки"><svg class="sp-icon" width="16" height="16"><use href="#i-bell"/></svg></button>
+          </div>
+        </div>
+      </header>
+
+      <figure class="figure w-100 mb-7">
+        <div class="sp-img sp-img-21x9 rounded-5" data-label="фото 2400×1030 · заглушка" role="img" aria-label="Заглушка иллюстрации"></div>
+        <figcaption class="figure-caption mt-2">Палитра из шестнадцати оттенков в документации фреймворка. Иллюстрация заменена градиентом на токенах ядра.</figcaption>
+      </figure>
+
+      <div class="prose">
+        <p>Когда в 2021 году вышла пятая версия, цвета в ней жили в двух мирах: шестнадцатеричные значения в Sass и их копии в CSS-переменных. Чтобы получить оттенок посветлее, препроцессор смешивал цвет с белым ещё до того, как файл попадал в браузер. Шестая версия отдаёт эту работу самому браузеру: базовый цвет записан в пространстве <abbr title="Oklab lightness, chroma, hue — перцептивно равномерное цветовое пространство">oklch</abbr>, а ступени от 025 до 975 рассчитывает функция <code>color-mix()</code>.</p>
+        <h2>Почему oklch, а не hex</h2>
+        <p>Слово oklch складывается из трёх координат: <em>l</em> — светлота, <em>c</em> — насыщенность, <em>h</em> — тон в градусах. Приставка «ok» досталась от названия пространства Oklab, которое Бьёрн Оттоссон опубликовал в 2020 году как исправленную версию Lab. Главное свойство: одинаковый шаг светлоты воспринимается глазом одинаково для любого тона. Синий и жёлтый с одной светлотой выглядят одинаково «тяжёлыми», чего в hex и hsl добиться нельзя.</p>
+        <blockquote>
+          <p>Если раньше дизайнер подбирал двенадцать оттенков руками, теперь он задаёт один — остальные выводятся по правилу, и правило одинаково для всех шестнадцати цветов палитры.</p>
+          <footer class="blockquote-footer">Из описания подхода в документации шестой версии</footer>
+        </blockquote>
+        <h2>Композиция вместо вариантов</h2>
+        <p>Во второй половине статьи — самое заметное для верстальщика изменение. Кнопка больше не бывает «синей кнопкой» <code>.btn-primary</code>. Она собирается из двух классов: формы и темы.</p>
+        <table class="table table-sm">
+          <caption>Три способа покрасить одну кнопку</caption>
+          <thead><tr><th scope="col">пятая версия</th><th scope="col">шестая версия</th><th scope="col">что происходит</th></tr></thead>
+          <tbody>
+            <tr><td><code>.btn-primary</code></td><td><code>.btn-solid .theme-primary</code></td><td>тема ставит переменные <code>--bs-theme-bg</code>, <code>--bs-theme-fg</code>; кнопка их читает</td></tr>
+            <tr><td><code>.btn-outline-danger</code></td><td><code>.btn-outline .theme-danger</code></td><td>та же тема, другая форма</td></tr>
+            <tr><td>—</td><td><code>.btn-subtle .theme-success</code></td><td>новая форма: мягкий фон из ступени bg-subtle</td></tr>
+          </tbody>
+        </table>
+        <p>Тот же приём работает для значков, оповещений, аккордеонов, таблиц, степперов и аватаров. Девять тем ядра — primary, accent, success, danger, warning, info, inverse, secondary — и свою можно добавить одной записью в карту <code>$theme-colors</code>.</p>
+        <ul>
+          <li>оттенок меняется в одном месте — у токена <code>--bs-primary-base</code>;</li>
+          <li>компоненты не знают, какой цвет им достанется: они читают <code>--bs-theme-*</code>;</li>
+          <li>вложенный блок возвращается к значениям по умолчанию классом <code>theme-reset</code>.</li>
+        </ul>
+        <h2>Что придётся переучивать</h2>
+        <p>Пороговые версии браузеров выросли сразу на семьдесят выпусков Chrome. Утилиты поменяли место ответственного за ширину экрана: было <code>d-md-none</code>, стало <code>md:d-none</code>. Шкала отступов выросла с шести ступеней до тринадцати, и цифра в классе больше не значит того же, что в пятой версии. Об этих и других порогах — в <a href="../doklad/bootstrap-6-research.html">докладе</a>, который сопровождает этот сайт.</p>
+      </div>
+
+      <div class="card card-subtle theme-info my-7">
+        <div class="card-body">
+          <p class="fw-semibold mb-1">Справка редакции</p>
+          <p class="fs-sm mb-0">Этот материал — часть вымышленного издания; факты о фреймворке взяты из документации Bootstrap 6.0.0-alpha.1 и анонса от 8 октября 2026 года, остальное придумано для демонстрации вёрстки.</p>
+        </div>
+      </div>
+
+      <h2 class="fs-xl fw-semibold mb-4">Вопросы, которые нам задали после публикации</h2>
+      <div class="accordion accordion-gap mb-7">
+        <details class="accordion-item" name="faq" open>
+          <summary class="accordion-header">Нужно ли переписывать старые шаблоны?<svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg></summary>
+          <div class="accordion-body">Да, и это главная цена перехода. Переименованы классы кнопок, модальных окон, выпадающих меню, сетки и утилит. Проект приложил к репозиторию файл-инструкцию для агентов, который проводит миграцию по шагам.</div>
+        </details>
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-header">Как устроен этот аккордеон?<svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg></summary>
+          <div class="accordion-body">На элементах <code>&lt;details&gt;</code> и <code>&lt;summary&gt;</code>. Общий атрибут <code>name</code> делает группу взаимоисключающей — без единой строки JavaScript. Высота анимируется чистым CSS через <code>interpolate-size</code>.</div>
+        </details>
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-header">Что с поддержкой браузеров?<svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg></summary>
+          <div class="accordion-body">Chrome и Edge от 130-й версии, Firefox от 132-й, Safari от 18-й. Ниже порога нет ни полифилов, ни префиксов: страница просто отрисуется неверно.</div>
+        </details>
+      </div>
+
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-7">
+        <span class="fs-sm fg-3 me-2">Метки:</span>
+        <a class="chip" href="rubrika.html">oklch</a>
+        <a class="chip" href="rubrika.html">css-переменные</a>
+        <a class="chip" href="rubrika.html">дизайн-системы</a>
+        <a class="chip" href="rubrika.html">миграция</a>
+      </div>
+
+      <section aria-labelledby="h-comments" class="border-top border-subtle pt-7">
+        <h2 id="h-comments" class="fs-xl fw-semibold mb-4">Обсуждение <span class="badge badge-subtle theme-secondary">3</span></h2>
+        <div class="vstack gap-5 mb-7">
+          <div class="d-flex gap-3">
+            <span class="avatar avatar-sm theme-accent">ДК</span>
+            <div class="flex-grow-1">
+              <div class="fs-sm"><span class="fw-medium">Дана Касымова</span> <span class="fg-3">· 2 часа назад</span></div>
+              <p class="mb-1">Таблица в середине текста — лучшее объяснение композиции, которое я видела.</p>
+              <button class="btn-text theme-secondary btn-xs" type="button">Ответить</button>
+            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="avatar avatar-sm theme-success">МЖ</span>
+            <div class="flex-grow-1">
+              <div class="fs-sm"><span class="fw-medium">Марат Жаксыбеков</span> <span class="fg-3">· час назад</span></div>
+              <p class="mb-1">Интересно, выдержит ли старый парк планшетов в редакции новый порог браузеров.</p>
+              <button class="btn-text theme-secondary btn-xs" type="button">Ответить</button>
+            </div>
+          </div>
+        </div>
+        <form class="vstack gap-5" data-sp-demo="Комментарий отправлен на модерацию." data-bs-validate novalidate>
+          <div class="form-field">
+            <label for="commentText" class="form-label">Ваш комментарий</label>
+            <textarea class="form-control" id="commentText" rows="3" required placeholder="Коротко и по делу"></textarea>
+            <div class="form-text">Модератор читает комментарии в рабочие часы.</div>
+            <div class="invalid-feedback">Пустой комментарий отправить нельзя.</div>
+          </div>
+          <div class="d-flex gap-3">
+            <button class="btn-solid theme-primary" type="submit">Отправить</button>
+            <button class="btn-text theme-secondary" type="reset">Очистить</button>
+          </div>
+        </form>
+      </section>
+    </article>
+
+    <aside class="lg:col-4">
+      <div class="lg:sticky-top" style="top: 5rem">
+        <div class="card mb-5">
+          <div class="card-header fw-semibold">Читайте также</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a class="fg-body text-decoration-none" href="#">Степпер, аватар, чип: три компонента, которых не было в пятой версии</a><div class="fs-xs fg-3 mt-1">вчера</div></li>
+            <li class="list-group-item"><a class="fg-body text-decoration-none" href="#">Карусель на scroll-snap: как браузер сам крутит ленту</a><div class="fs-xs fg-3 mt-1">3 дня назад</div></li>
+            <li class="list-group-item"><a class="fg-body text-decoration-none" href="#">Одиннадцать слоёв каскада: кто кого перекрывает</a><div class="fs-xs fg-3 mt-1">неделю назад</div></li>
+          </ul>
+        </div>
+        <div class="card card-subtle theme-primary mb-5">
+          <div class="card-body">
+            <p class="fw-semibold mb-1">Рассылка «Технологии»</p>
+            <p class="fs-sm mb-3">Раз в неделю — три материала рубрики и одна ссылка от редактора.</p>
+            <a class="btn-solid theme-primary btn-sm" href="formy.html">Подписаться</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="sp-kicker mb-3">популярные метки</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="chip theme-primary" href="rubrika.html">bootstrap</a><a class="chip theme-primary" href="rubrika.html">css</a><a class="chip theme-primary" href="rubrika.html">дизайн</a><a class="chip theme-primary" href="rubrika.html">доступность</a><a class="chip theme-primary" href="rubrika.html">редакция</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <dialog class="dialog" id="shareDialog" aria-labelledby="shareTitle">
+    <div class="dialog-header">
+      <h2 class="dialog-title fs-lg" id="shareTitle">Поделиться материалом</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Закрыть"></button>
+    </div>
+    <div class="dialog-body vstack gap-5">
+      <p class="mb-0 fg-2">Нативный элемент <code>&lt;dialog&gt;</code>: подложку, ловушку фокуса и закрытие по Escape даёт браузер, а не плагин.</p>
+      <div class="form-field">
+        <label for="shareUrl" class="form-label">Ссылка</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="shareUrl" value="https://shestaya-polosa.example/tehnologii/cvetovaya-model" readonly>
+          <button class="btn-solid theme-primary" type="button" data-sp-copy="#shareUrl">Копировать</button>
+        </div>
+      </div>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn-outline theme-secondary btn-sm" type="button" data-sp-toast="Открываем Telegram…">Telegram</button>
+        <button class="btn-outline theme-secondary btn-sm" type="button" data-sp-toast="Открываем почтовый клиент…">Почта</button>
+        <button class="btn-outline theme-secondary btn-sm" type="button" data-sp-toast="Ссылка добавлена в заметки.">Заметки</button>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn-text theme-secondary" data-bs-dismiss="dialog">Закрыть</button>
+    </div>
+  </dialog>
+</main>
+
+<footer class="border-top border-subtle bg-1 mt-12">
+  <div class="container py-9">
+    <div class="row g-7">
+      <div class="md:col-5">
+        <p class="fw-semibold mb-2"><span class="sp-mark" aria-hidden="true">6</span>Шестая полоса</p>
+        <p class="fg-2 fs-sm mb-3">Вымышленное сетевое издание, собранное для исследования «Bootstrap 6: разбор фреймворка на смоделированном сайте». Имена, тексты и цифры придуманы, кроме сведений о самом фреймворке.</p>
+        <p class="fg-3 fs-xs mb-0">Bootstrap 6.0.0-alpha.1 · сборка демо 2026-10-09 06:04 UTC · редакция 1.0</p>
+      </div>
+      <div class="sm:col-6 md:col-3 md:offset-1">
+        <p class="sp-kicker mb-3">Разделы</p>
+        <ul class="list-unstyled vstack gap-2 fs-sm"><li><a class="underline-30 hover:underline-100" href="index.html">Главная</a></li><li><a class="underline-30 hover:underline-100" href="rubrika.html">Рубрика</a></li><li><a class="underline-30 hover:underline-100" href="statya.html">Статья</a></li><li><a class="underline-30 hover:underline-100" href="komponenty.html">Компоненты</a></li><li><a class="underline-30 hover:underline-100" href="formy.html">Формы</a></li><li><a class="underline-30 hover:underline-100" href="tokeny.html">Токены</a></li><li><a class="underline-30 hover:underline-100" href="redakciya.html">Редакция</a></li></ul>
+      </div>
+      <div class="sm:col-6 md:col-3">
+        <p class="sp-kicker mb-3">Исследование</p>
+        <ul class="list-unstyled vstack gap-2 fs-sm">
+          <li><a class="underline-30 hover:underline-100" href="../doklad/bootstrap-6-research.html">Доклад</a></li>
+          <li><a class="underline-30 hover:underline-100" href="../skrinshoty/">Сайт в скриншотах</a></li>
+          <li><a class="underline-30 hover:underline-100" href="https://github.com/bsakhanov/bootstrap-6-research">Репозиторий</a></li>
+          <li><a class="underline-30 hover:underline-100" href="https://getbootstrap.com/docs/6.0/">Документация Bootstrap 6</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="toast-container position-fixed bottom-0 end-0 p-5" id="toastArea" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

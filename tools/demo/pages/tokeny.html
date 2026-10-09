@@ -1,0 +1,156 @@
+Токены и темы
+Площадка токенов Bootstrap 6: палитра из шестнадцати оттенков по тринадцать ступеней, семантические темы, живая перестройка радиусов, отступов и основного цвета, слои каскада, тени и шкала шрифтов.
+<main id="main" class="container sp-section">
+  <header class="mb-9">
+    <p class="sp-kicker mb-2">токены</p>
+    <h1 class="fs-4xl fw-semibold mb-3">Токены и темы</h1>
+    <p class="fg-2 text-pretty mb-0" style="max-width: 72ch">Почти каждая Sass-переменная пятой версии стала CSS-переменной в карте токенов. Это значит, что оформление меняется в браузере, без пересборки: на этой странице всё, что справа, перестраивается от ползунков слева.</p>
+  </header>
+
+  <section class="mb-12" aria-labelledby="h-live">
+    <h2 id="h-live" class="fs-2xl fw-semibold mb-2">Живая настройка</h2>
+    <p class="fg-2 mb-5">Радиусы и отступы в ядре — шкалы от одного базового числа; оттенок primary собирается из ступеней любого цвета палитры; схема переключается атрибутом <code>data-bs-theme</code> на одном элементе.</p>
+    <div class="row g-9" data-sp-playground>
+      <div class="lg:col-4 vstack gap-5">
+        <div>
+          <label for="tkRadius" class="form-label d-flex justify-content-between">Базовый радиус <code data-sp-out="radius" data-sp-unit="rem"></code></label>
+          <div class="form-range"><input type="range" class="form-range-input" id="tkRadius" min="0" max="1.5" step="0.125" value="0.5" data-sp-token="radius"></div>
+        </div>
+        <div>
+          <label for="tkSpacer" class="form-label d-flex justify-content-between">Базовый отступ <code data-sp-out="spacer" data-sp-unit="rem"></code></label>
+          <div class="form-range"><input type="range" class="form-range-input" id="tkSpacer" min="0.5" max="1.5" step="0.125" value="1" data-sp-token="spacer"></div>
+        </div>
+        <div class="form-field">
+          <label for="tkHue" class="form-label">Оттенок primary</label>
+          <select class="form-control" id="tkHue" data-sp-token="hue">
+            <option value="blue" selected>blue</option><option value="indigo">indigo</option><option value="violet">violet</option><option value="purple">purple</option><option value="pink">pink</option><option value="red">red</option><option value="orange">orange</option><option value="amber">amber</option><option value="yellow">yellow</option><option value="lime">lime</option><option value="green">green</option><option value="teal">teal</option><option value="cyan">cyan</option><option value="brown">brown</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Схема площадки</label>
+          <div class="btn-group" role="group" aria-label="Схема">
+            <button class="btn-outline theme-secondary btn-sm active" type="button" data-sp-scheme="auto">как в системе</button>
+            <button class="btn-outline theme-secondary btn-sm" type="button" data-sp-scheme="light">светлая</button>
+            <button class="btn-outline theme-secondary btn-sm" type="button" data-sp-scheme="dark">тёмная</button>
+          </div>
+        </div>
+        <pre class="sp-code mb-0" data-sp-code></pre>
+      </div>
+      <div class="lg:col-8">
+        <div class="p-7 rounded-7 border border-subtle bg-body" data-sp-target>
+          <nav class="navbar bg-1 rounded-5 border border-subtle mb-5"><div class="container-fluid"><span class="navbar-brand fw-semibold"><span class="sp-mark" aria-hidden="true">6</span>Площадка</span><ul class="nav navbar-nav"><li class="nav-item"><a class="nav-link active" href="#">Лента</a></li><li class="nav-item"><a class="nav-link" href="#">Рубрики</a></li></ul><a class="btn-solid theme-primary btn-sm" href="#">Подписаться</a></div></nav>
+          <div class="row g-5">
+            <div class="md:col-7">
+              <div class="card">
+                <div class="sp-img card-img-top" data-label="" role="img" aria-label="Заглушка"></div>
+                <div class="card-body">
+                  <div class="d-flex gap-2 mb-2"><span class="badge theme-primary">новое</span><span class="badge badge-subtle theme-primary">мягкий</span><span class="badge badge-outline theme-primary">контур</span></div>
+                  <h3 class="fs-lg fw-semibold">Карточка слушает четыре токена</h3>
+                  <p class="fg-2 fs-sm">Скругление — <code>--bs-radius-5</code>, отступы тела — <code>--bs-spacer-*</code>, цвет значков и кнопок — <code>--bs-primary-*</code>, фон и текст — <code>light-dark()</code>.</p>
+                  <div class="d-flex gap-2 flex-wrap"><button class="btn-solid theme-primary" type="button">Основная</button><button class="btn-outline theme-primary" type="button">Контур</button><button class="btn-subtle theme-primary" type="button">Мягкая</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-5 vstack gap-4">
+              <div class="alert theme-primary mb-0" role="alert"><p class="mb-0">Оповещение той же темы.</p></div>
+              <div class="form-field"><label class="form-label" for="tkInput">Поле</label><input type="text" class="form-control" id="tkInput" placeholder="Кольцо фокуса — тоже токен"></div>
+              <div class="form-field"><div class="switch"><input type="checkbox" id="tkSwitch" role="switch" switch checked></div><label for="tkSwitch">Переключатель</label></div>
+              <div class="progress" role="progressbar" aria-label="Ход" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 60%"></div></div>
+              <ol class="stepper stepper-horizontal mb-0"><li class="stepper-item active">Шаг</li><li class="stepper-item active">Шаг</li><li class="stepper-item">Шаг</li></ol>
+              <div class="accordion accordion-sm">
+                <details class="accordion-item" name="tk" open><summary class="accordion-header">Аккордеон<svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg></summary><div class="accordion-body fs-sm">Радиус рамки берёт из шкалы.</div></details>
+                <details class="accordion-item" name="tk"><summary class="accordion-header">Второй пункт<svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg></summary><div class="accordion-body fs-sm">Открывается без JavaScript.</div></details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-12" aria-labelledby="h-palette">
+    <h2 id="h-palette" class="fs-2xl fw-semibold mb-2">Палитра: 16 оттенков × 13 ступеней</h2>
+    <p class="fg-2 mb-5">Базовая ступень 500 записана в oklch, остальные двенадцать браузер смешивает с белым и чёрным в том же пространстве функцией <code>color-mix()</code>. Все 208 цветов ниже прочитаны из токенов <code>:root</code> скриптом страницы.</p>
+    <div id="palette" class="overflow-x-auto"></div>
+  </section>
+
+  <section class="mb-12" aria-labelledby="h-semantic">
+    <h2 id="h-semantic" class="fs-2xl fw-semibold mb-2">Семантические темы</h2>
+    <p class="fg-2 mb-5">У каждой темы девять ролей: base, fg, fg-emphasis, bg, bg-subtle, bg-muted, border, focus-ring, contrast. Компоненты читают роли через <code>--bs-theme-*</code>, поэтому новая тема — это одна запись в карте, а не новый набор классов.</p>
+    <div class="row sm:row-cols-2 lg:row-cols-4 g-5">
+      <div class="col"><div class="theme-primary rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">primary · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-primary">fg</span> · <span class="fg-emphasis-primary">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-accent rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">accent · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-accent">fg</span> · <span class="fg-emphasis-accent">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-success rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">success · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-success">fg</span> · <span class="fg-emphasis-success">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-danger rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">danger · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-danger">fg</span> · <span class="fg-emphasis-danger">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-warning rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">warning · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-warning">fg</span> · <span class="fg-emphasis-warning">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-info rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">info · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-info">fg</span> · <span class="fg-emphasis-info">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-inverse rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">inverse · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-inverse">fg</span> · <span class="fg-emphasis-inverse">fg-emphasis</span></div></div></div>
+      <div class="col"><div class="theme-secondary rounded-5 overflow-hidden border border-subtle"><div class="theme-contrast p-4 fw-semibold">secondary · contrast</div><div class="theme-subtle p-4 fs-sm">bg-subtle + fg-emphasis</div><div class="theme-muted p-4 fs-sm">bg-muted</div><div class="p-4 fs-sm bg-body"><span class="fg-secondary">fg</span> · <span class="fg-emphasis-secondary">fg-emphasis</span></div></div></div>
+    </div>
+    <div class="row g-5 mt-1">
+      <div class="md:col-6"><p class="sp-kicker mb-3">нейтральные поверхности</p><div class="d-flex gap-2"><div class="bg-body border border-subtle rounded-4 p-4 flex-fill fs-sm">bg-body</div><div class="bg-1 rounded-4 p-4 flex-fill fs-sm">bg-1</div><div class="bg-2 rounded-4 p-4 flex-fill fs-sm">bg-2</div><div class="bg-3 rounded-4 p-4 flex-fill fs-sm">bg-3</div><div class="bg-4 rounded-4 p-4 flex-fill fs-sm">bg-4</div></div></div>
+      <div class="md:col-6"><p class="sp-kicker mb-3">ступени текста</p><div class="d-flex gap-4 fs-lg"><span class="fg-body">fg-body</span><span class="fg-1">fg-1</span><span class="fg-2">fg-2</span><span class="fg-3">fg-3</span><span class="fg-4">fg-4</span></div></div>
+    </div>
+  </section>
+
+  <section class="mb-12" aria-labelledby="h-layers">
+    <h2 id="h-layers" class="fs-2xl fw-semibold mb-2">Одиннадцать слоёв каскада</h2>
+    <p class="fg-2 mb-5">Весь фреймворк разложен по <code>@layer</code>: правило из позднего слоя побеждает правило из раннего независимо от специфичности селектора. Слой <code>custom</code> оставлен пустым для ваших стилей — он выше компонентов, но ниже утилит, поэтому утилита всегда перекроет и компонент, и вашу надстройку.</p>
+    <ol class="list-unstyled d-flex flex-column gap-2 mb-0" style="max-width: 36rem">
+      <li class="sp-layer"><span class="fg-3 me-3">01</span>colors <span class="fg-3 fs-xs ms-2">208 цветовых токенов</span></li>
+      <li class="sp-layer"><span class="fg-3 me-3">02</span>config</li>
+      <li class="sp-layer"><span class="fg-3 me-3">03</span>root <span class="fg-3 fs-xs ms-2">глобальные токены, color-scheme</span></li>
+      <li class="sp-layer"><span class="fg-3 me-3">04</span>reboot</li>
+      <li class="sp-layer"><span class="fg-3 me-3">05</span>layout <span class="fg-3 fs-xs ms-2">контейнеры, сетка</span></li>
+      <li class="sp-layer"><span class="fg-3 me-3">06</span>content <span class="fg-3 fs-xs ms-2">типографика, таблицы, prose</span></li>
+      <li class="sp-layer"><span class="fg-3 me-3">07</span>forms</li>
+      <li class="sp-layer"><span class="fg-3 me-3">08</span>components</li>
+      <li class="sp-layer theme-primary theme-subtle"><span class="me-3">09</span>custom <span class="fs-xs ms-2">ваши стили — этот сайт кладёт сюда site.css</span></li>
+      <li class="sp-layer"><span class="fg-3 me-3">10</span>helpers</li>
+      <li class="sp-layer"><span class="fg-3 me-3">11</span>utilities <span class="fg-3 fs-xs ms-2">верхний слой, всегда побеждает</span></li>
+    </ol>
+  </section>
+
+  <section class="mb-12" aria-labelledby="h-shadows">
+    <h2 id="h-shadows" class="fs-2xl fw-semibold mb-2">Тени и радиусы</h2>
+    <p class="fg-2 mb-5">Тень — несколько слоёв с альфой из <code>oklch(from …)</code>; в тёмной схеме токен <code>--bs-shadow-strength</code> сам усиливает её в 2,4 раза. Радиусы — десять ступеней от нуля до двойного базового.</p>
+    <div class="d-flex flex-wrap gap-7 mb-7">
+      <div class="bg-body shadow-xs rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow-xs</div>
+      <div class="bg-body shadow-sm rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow-sm</div>
+      <div class="bg-body shadow rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow</div>
+      <div class="bg-body shadow-lg rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow-lg</div>
+      <div class="bg-body shadow-xl rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow-xl</div>
+      <div class="bg-body shadow-lg shadow-primary rounded-5 p-5 fs-sm" style="inline-size: 8rem">shadow-primary</div>
+    </div>
+    <div class="d-flex flex-wrap gap-4">
+      <div class="bg-subtle-primary border border-primary rounded-0 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">0</div>
+      <div class="bg-subtle-primary border border-primary rounded-1 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">1</div>
+      <div class="bg-subtle-primary border border-primary rounded-2 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">2</div>
+      <div class="bg-subtle-primary border border-primary rounded-3 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">3</div>
+      <div class="bg-subtle-primary border border-primary rounded-4 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">4</div>
+      <div class="bg-subtle-primary border border-primary rounded-5 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">5</div>
+      <div class="bg-subtle-primary border border-primary rounded-6 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">6</div>
+      <div class="bg-subtle-primary border border-primary rounded-7 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">7</div>
+      <div class="bg-subtle-primary border border-primary rounded-8 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">8</div>
+      <div class="bg-subtle-primary border border-primary rounded-9 d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">9</div>
+      <div class="bg-subtle-primary border border-primary rounded-pill d-grid place-items-center fs-xs" style="inline-size: 5rem; block-size: 5rem">pill</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-type">
+    <h2 id="h-type" class="fs-2xl fw-semibold mb-2">Шкала шрифтов</h2>
+    <p class="fg-2 mb-5">Десять ступеней от xs до 6xl. С ступени lg размер — функция <code>clamp()</code>: он растёт вместе с окном в заданных пределах, поэтому библиотека RFS больше не нужна. Справа — вычисленное значение в текущем окне.</p>
+    <div class="vstack">
+      <div class="sp-fs-row" data-sp-fs><span class="fs-xs">Шрифт xs</span><span class="fg-3 fs-xs">.fs-xs</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-sm">Шрифт sm</span><span class="fg-3 fs-xs">.fs-sm</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-md">Шрифт md</span><span class="fg-3 fs-xs">.fs-md</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-lg">Шрифт lg</span><span class="fg-3 fs-xs">.fs-lg · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-xl">Шрифт xl</span><span class="fg-3 fs-xs">.fs-xl · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-2xl">Шрифт 2xl</span><span class="fg-3 fs-xs">.fs-2xl · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-3xl">Шрифт 3xl</span><span class="fg-3 fs-xs">.fs-3xl · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-4xl">Шрифт 4xl</span><span class="fg-3 fs-xs">.fs-4xl · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-5xl">5xl</span><span class="fg-3 fs-xs">.fs-5xl · clamp</span><code></code></div>
+      <div class="sp-fs-row" data-sp-fs><span class="fs-6xl">6xl</span><span class="fg-3 fs-xs">.fs-6xl · clamp</span><code></code></div>
+    </div>
+  </section>
+</main>

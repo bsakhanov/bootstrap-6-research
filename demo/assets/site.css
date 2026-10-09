@@ -1,0 +1,91 @@
+/* Шестая полоса — собственные стили. Всё, что ниже, опирается только на токены Bootstrap 6:
+   ни одного цвета в hex, ни одного размера в px — так тёмная схема и перестройка радиусов
+   приходят сюда сами. Слой custom объявлен ядром между components и helpers. */
+@layer custom {
+  .sp-mark {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    margin-inline-end: .5rem;
+    border-radius: var(--bs-radius-4);
+    background: var(--bs-primary-bg);
+    color: var(--bs-primary-contrast);
+    font-weight: var(--bs-font-weight-bold);
+    font-size: var(--bs-font-size-sm);
+  }
+  .sp-kicker {
+    font-family: var(--bs-font-mono);
+    font-size: var(--bs-font-size-xs);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--bs-fg-3);
+  }
+  .sp-icon { display: inline-block; vertical-align: -.125em; flex: none; }
+  .sp-section { padding-block: var(--bs-spacer-12); }
+  .sp-hero {
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, var(--bs-primary-bg-subtle), transparent 70%),
+      radial-gradient(40rem 20rem at 0% 110%, var(--bs-accent-bg-subtle), transparent 70%);
+  }
+  /* иллюстрации-заглушки вместо фотографий: градиенты на токенах, подпись из атрибута */
+  .sp-img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--bs-primary-bg-subtle), var(--bs-primary-bg-muted) 60%, var(--bs-accent-bg-subtle));
+  }
+  .sp-img::after {
+    content: attr(data-label);
+    position: absolute;
+    inset-inline-end: var(--bs-spacer-4);
+    inset-block-end: var(--bs-spacer-3);
+    font-family: var(--bs-font-mono);
+    font-size: var(--bs-font-size-xs);
+    color: var(--bs-fg-3);
+  }
+  .sp-img-4x3 { aspect-ratio: 4 / 3; }
+  .sp-img-1x1 { aspect-ratio: 1; }
+  .sp-img-21x9 { aspect-ratio: 21 / 9; }
+  .sp-img-green { background: linear-gradient(135deg, var(--bs-success-bg-subtle), var(--bs-teal-200) 60%, var(--bs-success-bg-muted)); }
+  .sp-img-warm { background: linear-gradient(135deg, var(--bs-warning-bg-subtle), var(--bs-orange-200) 60%, var(--bs-danger-bg-subtle)); }
+  .sp-img-violet { background: linear-gradient(135deg, var(--bs-accent-bg-subtle), var(--bs-violet-200) 60%, var(--bs-pink-100)); }
+  .sp-img-ink { background: linear-gradient(135deg, var(--bs-gray-700), var(--bs-gray-900)); }
+  .sp-img-ink::after { color: var(--bs-gray-300); }
+  /* рамка, которую можно тянуть за угол: демонстрация контейнерных запросов */
+  .sp-resizer {
+    resize: horizontal;
+    overflow: auto;
+    min-inline-size: 16rem;
+    max-inline-size: 100%;
+    padding: var(--bs-spacer-5);
+    border: 1px dashed var(--bs-border-emphasized);
+    border-radius: var(--bs-radius-5);
+  }
+  .sp-swatch { aspect-ratio: 1; border-radius: var(--bs-radius-3); border: 1px solid var(--bs-border-color-translucent); }
+  .sp-layer {
+    padding: var(--bs-spacer-3) var(--bs-spacer-5);
+    border: 1px solid var(--bs-border-subtle);
+    border-radius: var(--bs-radius-4);
+    background: var(--bs-bg-1);
+    font-family: var(--bs-font-mono);
+    font-size: var(--bs-font-size-sm);
+  }
+  .sp-demo-root { container-type: inline-size; }
+  .sp-code {
+    font-family: var(--bs-font-mono);
+    font-size: var(--bs-font-size-sm);
+    background: var(--bs-bg-2);
+    border: 1px solid var(--bs-border-subtle);
+    border-radius: var(--bs-radius-4);
+    padding: var(--bs-spacer-5);
+    overflow: auto;
+    white-space: pre;
+  }
+  .sp-stat { font-size: var(--bs-font-size-3xl); line-height: 1.1; font-weight: var(--bs-font-weight-semibold); letter-spacing: -.01em; }
+  .sp-admin-side .nav-link { border-radius: var(--bs-radius-4); }
+  .sp-fs-row { display: flex; align-items: baseline; gap: var(--bs-spacer-5); border-bottom: 1px solid var(--bs-border-subtle); padding-block: var(--bs-spacer-3); }
+  .sp-fs-row code { margin-inline-start: auto; color: var(--bs-fg-3); font-size: var(--bs-font-size-xs); }
+}
