@@ -11,5 +11,5 @@ https://creativecommons.org/licenses/by/4.0/
 The demo site (demo/, except demo/assets/bootstrap/) and the tools (tools/) are MIT-licensed, see tools/LICENSE.
 
 Bootstrap © The Bootstrap Authors, MIT — demo/assets/bootstrap/LICENSE. Chart.js © Chart.js Contributors, MIT.
-tools/lang/milchin.py и tools/lang/apply.py — из семьи редакторских скилов beaverbeard (MIT), github.com/beaverbeard.
+tools/lang/milchin.py — типограф из семьи редакторских скилов beaverbeard (MIT), github.com/beaverbeard.
 Bootstrap® — торговая марка The Bootstrap Authors; исследование с проектом Bootstrap не связано.

@@ -134,7 +134,7 @@ def main():
 <body>
 <nav class="topnav"><div class="topnav-inner"><a class="topnav-mark" href="../">bootstrap 6 · сайт в скриншотах</a><div class="topnav-links">{nav}<a href="../doklad/bootstrap-6-research.html">доклад</a><a href="../demo/index.html">демо-сайт</a></div></div></nav>
 <header class="hero"><div class="wrap">
-<p class="eyebrow">приложение к исследованию · редакция 1.0.4 · 11 октября 2026</p>
+<p class="eyebrow">приложение к исследованию · редакция 1.0.5 · 11 октября 2026</p>
 <h1>Демо-сайт Bootstrap 6 в скриншотах</h1>
 <p class="lead">{total} экранов демо-сайта на Bootstrap 6.0.0-alpha.1, снятых в Chromium 153.0.8010.0 через Playwright 1.56 в масштабе 2×: семь страниц на десктопе и телефоне, тёмная схема, открытые состояния и крупные планы — с разбором того, что на каждом экране делает фреймворк.</p>
 <p class="sub">Клик по снимку открывает оригинал PNG; на странице показаны превью WebP шириной 1200 пикселей; оригиналы PNG лежат в репозитории на GitHub Pages. Тёмная схема включена эмуляцией системного предпочтения, а не атрибутом. Автор — Бейбит Саханов, Астана.</p>
