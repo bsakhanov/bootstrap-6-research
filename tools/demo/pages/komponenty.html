@@ -1,5 +1,5 @@
 Компоненты
-Витрина компонентов Bootstrap 6: кнопки как композиция формы и темы, значки и чипы, оповещения, диалоги и ящики на нативном dialog, меню, вкладки, степпер, карусель на scroll-snap, аватары, таблицы.
+Витрина компонентов Bootstrap 6: кнопки как композиция формы и темы, значки и чипы, оповещения, dialog и drawer на нативном dialog, меню, вкладки, степпер, карусель на scroll-snap, аватары, таблицы.
 <main id="main" class="container sp-section">
   <header class="mb-9">
     <p class="sp-kicker mb-2">витрина</p>
@@ -12,7 +12,7 @@
         <li class="nav-item"><a class="nav-link" href="#c-buttons">Кнопки</a></li>
         <li class="nav-item"><a class="nav-link" href="#c-badges">Значки и чипы</a></li>
         <li class="nav-item"><a class="nav-link" href="#c-alerts">Оповещения и ход</a></li>
-        <li class="nav-item"><a class="nav-link" href="#c-dialogs">Диалоги и ящики</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c-dialogs">Dialog и Drawer</a></li>
         <li class="nav-item"><a class="nav-link" href="#c-menus">Меню</a></li>
         <li class="nav-item"><a class="nav-link" href="#c-nav">Навигация и шаги</a></li>
         <li class="nav-item"><a class="nav-link" href="#c-carousel">Карусель</a></li>
@@ -122,8 +122,8 @@
       </section>
 
       <section id="c-dialogs" aria-labelledby="h-dialogs">
-        <h2 id="h-dialogs" class="fs-2xl fw-semibold mb-2">Диалоги и ящики на нативном dialog</h2>
-        <p class="fg-2 mb-5">Модальное окно — элемент <code>&lt;dialog&gt;</code>: подложку рисует <code>::backdrop</code>, фокус запирает браузер, прокрутку страницы держит <code>scrollbar-gutter: stable</code>, поэтому макет не прыгает. Ящик — тот же элемент с другой геометрией.</p>
+        <h2 id="h-dialogs" class="fs-2xl fw-semibold mb-2">Dialog и Drawer на нативном dialog</h2>
+        <p class="fg-2 mb-5">Модальное окно — элемент <code>&lt;dialog&gt;</code>: подложку рисует <code>::backdrop</code>, фокус запирает браузер, прокрутку страницы держит <code>scrollbar-gutter: stable</code>, поэтому макет не прыгает. Drawer — тот же элемент с другой геометрией.</p>
         <div class="d-flex flex-wrap gap-3 mb-5">
           <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgDefault">Обычный диалог</button>
           <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgSlide">Выезжает снизу</button>
@@ -132,9 +132,9 @@
           <button class="btn-outline theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#dlgScroll">Прокручиваемый</button>
         </div>
         <div class="d-flex flex-wrap gap-3">
-          <button class="btn-solid theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwStart">Ящик слева</button>
-          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwBottom">Ящик снизу</button>
-          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwSheet">Лист без отступов</button>
+          <button class="btn-solid theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwStart">Drawer слева</button>
+          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwBottom">Drawer снизу</button>
+          <button class="btn-outline theme-accent" type="button" data-bs-toggle="drawer" data-bs-target="#drwSheet">Drawer-sheet</button>
         </div>
       </section>
 
@@ -328,15 +328,15 @@
     <div class="dialog-footer"><button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Прочитал</button></div>
   </dialog>
   <dialog class="drawer drawer-start" tabindex="-1" id="drwStart" aria-labelledby="drwStartTitle">
-    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwStartTitle">Ящик слева</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwStartTitle">Drawer слева</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
     <div class="drawer-body vstack gap-3"><p class="mb-0">На сенсорном экране его можно смахнуть обратно — жест встроен в плагин.</p><ul class="nav nav-pills flex-column"><li class="nav-item"><a class="nav-link active" href="#">Лента</a></li><li class="nav-item"><a class="nav-link" href="#">Рубрики</a></li><li class="nav-item"><a class="nav-link" href="#">Авторы</a></li></ul></div>
   </dialog>
   <dialog class="drawer drawer-bottom" tabindex="-1" id="drwBottom" aria-labelledby="drwBottomTitle">
-    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwBottomTitle">Ящик снизу</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwBottomTitle">Drawer снизу</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
     <div class="drawer-body"><p class="mb-0">Подходит для действий с материалом на телефоне: отправить, отложить, удалить.</p></div>
   </dialog>
   <dialog class="drawer drawer-sheet drawer-end" tabindex="-1" id="drwSheet" aria-labelledby="drwSheetTitle">
-    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwSheetTitle">Лист</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
+    <div class="drawer-header"><h2 class="drawer-title fs-lg" id="drwSheetTitle">Drawer-sheet</h2><button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Закрыть"></button></div>
     <div class="drawer-body"><p class="mb-0">Вариант <code>drawer-sheet</code>: без отступа от края, без скругления и тени.</p></div>
   </dialog>
 </main>

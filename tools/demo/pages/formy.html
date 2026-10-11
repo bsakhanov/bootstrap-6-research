@@ -1,5 +1,5 @@
 Формы
-Регистрация читателя как витрина форм Bootstrap 6: form-field, form-adorn, плавающие подписи, комбобокс, поле с чипами, календарь, код подтверждения, измеритель пароля, ползунок с подписью и делениями, проверка после первого касания.
+Регистрация читателя как витрина форм Bootstrap 6: form-field, form-adorn, плавающие метки, комбобокс, поле с чипами, календарь, OTP-поле, индикатор надёжности пароля, ползунок с подписью и делениями, проверка после первого касания.
 <main id="main" class="container sp-section">
   <header class="mb-9">
     <p class="sp-kicker mb-2">формы</p>
@@ -128,7 +128,7 @@
             <div class="form-field g-col-12 md:g-col-6">
               <label for="fOtp" class="form-label">Код из письма</label>
               <div class="otp otp-connected" data-bs-otp data-bs-groups="[3,3]">
-                <input type="text" class="otp-input" id="fOtp" maxlength="6" aria-label="Код подтверждения" inputmode="numeric">
+                <input type="text" class="otp-input" id="fOtp" maxlength="6" aria-label="OTP-поле" inputmode="numeric">
               </div>
               <div class="form-text">Одно поле ввода, нарисованное как шесть ячеек: вставка из буфера раскладывается по ячейкам сама.</div>
             </div>
@@ -167,7 +167,7 @@
               <li><code>form-field</code> — сетка «подпись + поле + подсказка + ошибка»;</li>
               <li><code>form-adorn</code> — поле с иконкой;</li>
               <li>комбобокс с поиском, поле с чипами, календарь;</li>
-              <li>код подтверждения, измеритель пароля;</li>
+              <li>OTP-поле, индикатор надёжности пароля;</li>
               <li>ползунок с подписью и делениями;</li>
               <li>проверка через <code>:user-invalid</code>.</li>
             </ul>

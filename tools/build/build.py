@@ -127,8 +127,8 @@ CHARTS = {
         'options': {'indexAxis': 'y', 'scales': {'x': {'title': {'display': True, 'text': 'вхождений в bootstrap.css'}}}}},
     'breakpoints': {'type': 'bar', 'height': 360, 'data': {
         'labels': ['sm', 'md', 'lg', 'xl', 'xxl → 2xl'],
-        'datasets': [{'label': 'точка перелома v5, px', 'data': [576, 768, 992, 1200, 1400], 'backgroundColor': '#33505E'},
-                     {'label': 'точка перелома v6, px', 'data': [576, 768, 1024, 1280, 1536], 'backgroundColor': '#B54A24'},
+        'datasets': [{'label': 'контрольная точка v5, px', 'data': [576, 768, 992, 1200, 1400], 'backgroundColor': '#33505E'},
+                     {'label': 'контрольная точка v6, px', 'data': [576, 768, 1024, 1280, 1536], 'backgroundColor': '#B54A24'},
                      {'label': 'контейнер v5, px', 'data': [540, 720, 960, 1140, 1320], 'backgroundColor': '#9FB3BC'},
                      {'label': 'контейнер v6, px', 'data': [540, 720, 960, 1200, 1440], 'backgroundColor': '#E0A585'}]},
         'options': {'scales': {'y': {'beginAtZero': True, 'title': {'display': True, 'text': 'пиксели'}}}}},
@@ -223,7 +223,7 @@ def diagram_layers():
 def diagram_components():
     rows = [('Modal', 'Dialog', '<dialog>, ::backdrop'), ('Offcanvas', 'Drawer', '<dialog>, свайп'), ('Dropdown', 'Menu', 'Floating UI, подменю'),
             ('Accordion + Collapse', 'Accordion', '<details name>, interpolate-size'), ('Carousel (float, JS)', 'Carousel', 'scroll-snap, несколько слайдов'),
-            ('.btn-primary', 'btn-solid + theme-*', 'композиция формы и темы'), ('navbar-collapse', 'navbar + drawer', 'меню в ящике'),
+            ('.btn-primary', 'btn-solid + theme-*', 'композиция формы и темы'), ('navbar-collapse', 'navbar + drawer', 'меню в drawer'),
             ('.form-check', 'check / radio / switch', 'маски, :has()'), ('.form-select', 'form-control', 'слияние'), ('Popper', 'Floating UI', 'зависимость')]
     news = ['Stepper', 'Avatar', 'Chip, Chip input', 'Combobox', 'OTP input', 'Password strength', 'Range (JS)', 'Datepicker', 'Nav overflow', 'Toggler', 'Form field', 'Form adorn', 'Prose', 'Hover lift']
     H = 70 + len(rows) * 36 + 120
@@ -247,10 +247,10 @@ def diagram_components():
     s.append('</svg>'); return ''.join(s)
 
 def diagram_site():
-    pages = [('Главная', 'герой clamp(), Grid 8+4,', 'контейнерные запросы'), ('Рубрика', 'nav-overflow, комбобокс,', 'lg:drawer, скелеты'),
+    pages = [('Главная', 'герой clamp(), Grid 8+4,', 'контейнерные запросы'), ('Рубрика', 'nav-overflow, комбобокс,', 'lg:drawer, заполнители'),
              ('Статья', 'prose, <dialog>,', '<details>, чипы'), ('Компоненты', 'кнопки форма×тема,', 'диалоги, меню, карусель'),
              ('Формы', 'form-field, комбобокс,', 'otp, strength, календарь'), ('Токены', 'палитра 16×13, темы,', 'перестройка, слои'),
-             ('Редакция', 'колонка → ящик,', 'степпер, таблица')]
+             ('Редакция', 'колонка → drawer,', 'степпер, таблица')]
     s = [f'<svg viewBox="0 0 1100 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Карта демо-сайта">{DEFS}']
     s.append(box(430, 20, 240, 56, 'Демо-сайт Bootstrap 6', 'build_demo.py · каркас + 7 фрагментов', fill='#E9EEF0'))
     for i, (t, a, b) in enumerate(pages):
@@ -259,7 +259,7 @@ def diagram_site():
         s.append(f'<rect x="{x}" y="{y}" width="136" height="110" rx="3" fill="{PAPER}" stroke="{LINE}"/>')
         s.append(label(x + 68, y + 24, t, INK, 'middle', 13.5)); s.append(f'<line x1="{x + 12}" y1="{y + 34}" x2="{x + 124}" y2="{y + 34}" stroke="{LINE}"/>')
         s.append(label(x + 68, y + 58, a, SOFT, 'middle', 10)); s.append(label(x + 68, y + 76, b, SOFT, 'middle', 10))
-    s.append(label(550, 300, 'общее: навбар с md:navbar-expand и меню в ящике · переключатель схемы · site.css в @layer custom · 43 снимка в Chromium 153', SOFT, 'middle', 12))
+    s.append(label(550, 300, 'общее: навбар с md:navbar-expand и меню в drawer · переключатель схемы · site.css в @layer custom · 43 снимка в Chromium 153', SOFT, 'middle', 12))
     s.append('</svg>'); return ''.join(s)
 
 DIAGRAMS = {'tokens': diagram_tokens, 'layers': diagram_layers, 'components': diagram_components, 'site': diagram_site}
@@ -359,6 +359,7 @@ figure.shot img{display:block;width:100%;height:auto;border:1px solid var(--line
 figure.shot a{display:block}
 figure.shot.shot-tall a{max-height:640px;overflow:auto;border:1px solid var(--line)}
 figure.shot.shot-tall img{border:0}
+figure.shot.shot-mobile{max-width:560px}
 dl.glossary dt{font-weight:700;margin-top:1.1em}
 dl.glossary dd{margin:.3em 0 0;color:var(--ink);font-size:15.5px;line-height:1.65}
 ol.sources{font-size:14px;line-height:1.55;padding-left:2.2em;max-width:900px}
@@ -424,7 +425,7 @@ doc = f"""<!DOCTYPE html>
 <p class="hero-lead">{html.escape(subtitle).capitalize()}: что шестое поколение переносит из препроцессора в браузер, чем это оплачено и как это выглядит на семи страницах вымышленного издания — демо-сайта Bootstrap 6.</p>
 <p class="hero-sub">Автор — Бейбит Саханов, Астана. Факты сверены по анонсу, документации и исходному коду ветки main на 8–9 октября 2026 года; расхождения и белые пятна вынесены в реестры, а не спрятаны в тексте.</p>
 <div class="hero-links"><a href="../demo/index.html">демо-сайт Bootstrap 6</a><a href="../skrinshoty/">сайт в скриншотах</a><a href="https://github.com/bsakhanov/bootstrap-6-research">репозиторий</a><a href="https://webmarka.kz/research/bootstrap-6/">основная копия на webmarka.kz</a><a href="https://webmarka.kz/research/joomla-6-newsroom/">предыдущий доклад: Joomla 6</a></div>
-<div class="method-box"><p class="eyebrow">метод</p><p>Источники — анонс проекта, 141 файл документации, исходный код Sass и TypeScript ветки main, пакеты npm шестой альфы и версии 5.3.8. Статистика CSS посчитана по скомпилированным файлам скриптом из репозитория исследования. Утверждения о вёрстке проверены на смоделированном сайте из семи страниц в Chromium 153 через Playwright. Каждое утверждение несёт номер источника; список построен по первому упоминанию. Текст прошёл четыре прохода языкового прогона и вычитку Редколлегией.</p></div>
+<div class="method-box"><p class="eyebrow">метод</p><p>Источники — анонс проекта, 141 файл документации, исходный код Sass и TypeScript ветки main, пакеты npm шестой альфы и версии 5.3.8. Статистика CSS посчитана по скомпилированным файлам скриптом из репозитория исследования. Утверждения о вёрстке проверены на смоделированном сайте из семи страниц в Chromium 153 через Playwright. Каждое утверждение несёт номер источника; список построен по первому упоминанию.</p></div>
 </div></header>
 <main>
 {''.join(out)}
