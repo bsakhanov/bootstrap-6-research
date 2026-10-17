@@ -2,7 +2,7 @@
 
 **Исследование-доклад о шестом поколении фреймворка — архитектура, вёрстка, дизайн — проверенное на вымышленном новостном сайте — демо-сайте Bootstrap 6 — и 43 снимках экрана**
 
-*Редакция 1.0.5 · 11 октября 2026 · автор — Бейбит Саханов, Астана*
+*Редакция 1.0.6 · 17 октября 2026 · автор — Бейбит Саханов, Астана*
 
 [English version below](#bootstrap-6-on-a-modelled-site)
 
@@ -54,6 +54,7 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 ## Версии
 
+- **1.0.6** — 17 октября 2026: страница скриншотов на узких экранах.
 - **1.0.5** — 11 октября 2026: из репозитория убрана папка отчёта вычитки.
 - **1.0.4** — 11 октября 2026: терминология выровнена по принятому в сообществе словоупотреблению (Drawer и Offcanvas латиницей, индикатор прогресса, контрольные точки, плавающие метки, OTP-поле); из доклада убраны служебные упоминания; в докладе снимок телефона и высокий снимок получили те же классы, что на странице скриншотов.
 - **1.0.3** — 9 октября 2026: превью снимков переведены в WebP (на webmarka.kz конвейер сайта конвертировал JPEG в WebP, и доклад потерял картинки); ссылки на оригиналы PNG — абсолютные, на GitHub Pages.
@@ -71,7 +72,7 @@ npm i bootstrap5@npm:bootstrap@5.3.8 && python3 tools/stats/css_stats.py node_mo
 
 **A research report on the sixth generation of the framework — architecture, markup, design — tested on a fictional news site built as a Bootstrap 6 demo, and 43 screenshots**
 
-*Edition 1.0.5 · 11 October 2026 · by Beibit Sakhanov, Astana*
+*Edition 1.0.6 · 17 October 2026 · by Beibit Sakhanov, Astana*
 
 ## What this is
 
